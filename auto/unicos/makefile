@@ -9,9 +9,11 @@ clean:
 	rm -f compiled/copy_unicos.o
 	rm -f compiled/extend_unicos.o
 	rm -f compiled/put_unicos.o
+	rm -f compiled/slice_unicos.o
+	rm -f compiled/concat_unicos.o
 
-unicos.lib: compiled/make_unicos.o compiled/free_unicos.o compiled/copy_unicos.o compiled/extend_unicos.o  compiled/put_unicos.o
-	ar r unicos.lib compiled/make_unicos.o compiled/free_unicos.o compiled/copy_unicos.o compiled/extend_unicos.o  compiled/put_unicos.o
+unicos.lib: compiled/make_unicos.o compiled/free_unicos.o compiled/copy_unicos.o compiled/extend_unicos.o  compiled/put_unicos.o compiled/slice_unicos.o compiled/concat_unicos.o
+	ar r unicos.lib compiled/make_unicos.o compiled/free_unicos.o compiled/copy_unicos.o compiled/extend_unicos.o  compiled/put_unicos.o compiled/slice_unicos.o compiled/concat_unicos.o
 
 compiled/make_unicos.o: src/make_unicos.c
 	$(CC) $(CFLAGS) -c src/make_unicos.c -o compiled/make_unicos.o
@@ -27,3 +29,9 @@ compiled/extend_unicos.o: src/extend_unicos.c
 	
 compiled/put_unicos.o: src/put_unicos.c
 	$(CC) $(CFLAGS) -c src/put_unicos.c -o compiled/put_unicos.o
+	
+compiled/slice_unicos.o: src/slice_unicos.c
+	$(CC) $(CFLAGS) -c src/slice_unicos.c -o compiled/slice_unicos.o
+	
+compiled/concat_unicos.o: src/concat_unicos.c
+	$(CC) $(CFLAGS) -c src/concat_unicos.c -o compiled/concat_unicos.o

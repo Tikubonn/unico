@@ -5,3 +5,5 @@
 #include "src/copy_unicos.h"
 #include "src/extend_unicos.h"
 #include "src/put_unicos.h"
+#include "src/slice_unicos.h"
+#include "src/concat_unicos.h"
