@@ -7,52 +7,52 @@ int put_unicoc_as_utf8 (unico uni, unicoc *uniout){
 	switch (size){
 		case 0: {
 			unsigned char data[] = { 
-				(uni >> 0) & 0x7f | 0x00, // 0b0xxxxxxxx
+				((uni >> 0) & 0x7f) | 0x00, // 0b0xxxxxxxx
 			};
 			return write_unicoc_manually(data, sizeof data, uniout);
 		}
 		case 1: {
 			unsigned char data[] = { 
-				(uni >> 6) & 0x1f | 0xc0, // 0b110xxxxx
-				(uni >> 0) & 0x3f | 0x80, // 0b10xxxxxx
+				((uni >> 6) & 0x1f) | 0xc0, // 0b110xxxxx
+				((uni >> 0) & 0x3f) | 0x80, // 0b10xxxxxx
 			};
 			return write_unicoc_manually(data, sizeof data, uniout); 
 		}
 		case 2: {
 			unsigned char data[] = { 
-				(uni >> 12) & 0x0f | 0xe0, // 0b1110xxxx
-				(uni >>  6) & 0x3f | 0x80, // 0b10xxxxxx
-				(uni >>  0) & 0x3f | 0x80, // 0b10xxxxxx
+				((uni >> 12) & 0x0f) | 0xe0, // 0b1110xxxx
+				((uni >>  6) & 0x3f) | 0x80, // 0b10xxxxxx
+				((uni >>  0) & 0x3f) | 0x80, // 0b10xxxxxx
 			};
 			return write_unicoc_manually(data, sizeof data, uniout);
 		}
 		case 3: {
 			unsigned char data[] = {
-				(uni >> 18) & 0x07 | 0xf0, // 0b11110xxx
-				(uni >> 12) & 0x3f | 0x80, // 0b10xxxxxx
-				(uni >>  6) & 0x3f | 0x80, // 0b10xxxxxx
-				(uni >>  0) & 0x3f | 0x80, // 0b10xxxxxx
+				((uni >> 18) & 0x07) | 0xf0, // 0b11110xxx
+				((uni >> 12) & 0x3f) | 0x80, // 0b10xxxxxx
+				((uni >>  6) & 0x3f) | 0x80, // 0b10xxxxxx
+				((uni >>  0) & 0x3f) | 0x80, // 0b10xxxxxx
 			};
 			return write_unicoc_manually(data, sizeof data, uniout);
 		}
 		case 4: {
 			unsigned char data[] = {
-				(uni >> 24) & 0x03 | 0xf8, // 0b111110xx
-				(uni >> 18) & 0x3f | 0x80, // 0b10xxxxxx
-				(uni >> 12) & 0x3f | 0x80, // 0b10xxxxxx
-				(uni >>  6) & 0x3f | 0x80, // 0b10xxxxxx
-				(uni >>  0) & 0x3f | 0x80, // 0b10xxxxxx
+				((uni >> 24) & 0x03) | 0xf8, // 0b111110xx
+				((uni >> 18) & 0x3f) | 0x80, // 0b10xxxxxx
+				((uni >> 12) & 0x3f) | 0x80, // 0b10xxxxxx
+				((uni >>  6) & 0x3f) | 0x80, // 0b10xxxxxx
+				((uni >>  0) & 0x3f) | 0x80, // 0b10xxxxxx
 			};
 			return write_unicoc_manually(data, sizeof data, uniout);
 		}
 		case 5: {
 			unsigned char data[] = {
-				(uni >> 30) & 0x01 | 0xfc, // 0b1111110x
-				(uni >> 24) & 0x3f | 0x80, // 0b10xxxxxx
-				(uni >> 18) & 0x3f | 0x80, // 0b10xxxxxx
-				(uni >> 12) & 0x3f | 0x80, // 0b10xxxxxx
-				(uni >>  6) & 0x3f | 0x80, // 0b10xxxxxx
-				(uni >>  0) & 0x3f | 0x80, // 0b10xxxxxx
+				((uni >> 30) & 0x01) | 0xfc, // 0b1111110x
+				((uni >> 24) & 0x3f) | 0x80, // 0b10xxxxxx
+				((uni >> 18) & 0x3f) | 0x80, // 0b10xxxxxx
+				((uni >> 12) & 0x3f) | 0x80, // 0b10xxxxxx
+				((uni >>  6) & 0x3f) | 0x80, // 0b10xxxxxx
+				((uni >>  0) & 0x3f) | 0x80, // 0b10xxxxxx
 			};
 			return write_unicoc_manually(data, sizeof data, uniout);
 		}

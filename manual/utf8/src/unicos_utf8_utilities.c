@@ -30,6 +30,7 @@ int width_of_utf8 (unsigned char character){
 	if (character >> 3 == 0b11110) return 3;
 	if (character >> 2 == 0b111110) return 2;
 	if (character >> 1 == 0b1111110) return 1;
+	return 0;
 }
 
 int value_of_utf8 (unsigned char character){
@@ -40,6 +41,7 @@ int value_of_utf8 (unsigned char character){
 	if (character >> 3 == 0b11110) return character & 0b00000111;
 	if (character >> 2 == 0b111110) return character & 0b00000011;
 	if (character >> 1 == 0b1111110) return character & 0b00000001;
+	return 0;
 }
 
 int is_concatenated_utf8 (unsigned char character){
