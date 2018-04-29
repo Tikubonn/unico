@@ -15,7 +15,7 @@ debug.lib: compiled/print_unicos_as_code_position.o compiled/print_unicos_as_utf
 
 compiled/print_unicos_as_code_position.o: src/print_unicos_as_code_position.c
 	$(CC) $(CFLAGS) -c src/print_unicos_as_code_position.c -o compiled/print_unicos_as_code_position.o
-	
+
 compiled/print_unicos_as_utf8.o: src/print_unicos_as_utf8.c
 	$(CC) $(CFLAGS) -c src/print_unicos_as_utf8.c -o compiled/print_unicos_as_utf8.o
 
