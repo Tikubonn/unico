@@ -1,0 +1,11 @@
+#pragma once
+#include "unicos.p"
+#include "src/init_unicos.h"
+#include "src/clear_unicos.h"
+#include "src/get_unicos.h"
+#include "src/put_unicos_manually.h"
+#include "src/has_margin_unicos.h"
+#include "src/size_unicos.h"
+#include "src/copy_unicos_manually.h"
+#include "src/write_unicos_manually.h"
+#include "src/copy_to_unicos.h"

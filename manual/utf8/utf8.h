@@ -1,0 +1,9 @@
+#pragma once
+#include "utf8.p"
+#include "src/init_unicos_utf8.h"
+#include "src/put_unicos_utf8_manually.h"
+#include "src/put_unicoc_as_utf8.h"
+#include "src/put_bom_unicoc_as_utf8.h"
+#include "src/copy_unicos_utf8_manually.h"
+#include "src/reset_unicos_utf8.h"
+#include "src/clear_unicos_utf8.h"

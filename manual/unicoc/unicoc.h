@@ -1,0 +1,11 @@
+#pragma once
+#include "unicoc.p"
+#include "src/init_unicoc.h"
+#include "src/clear_unicoc.h"
+#include "src/get_unicoc.h"
+#include "src/put_unicoc_manually.h"
+#include "src/has_margin_unicoc.h"
+#include "src/size_unicoc.h"
+#include "src/copy_unicoc_manually.h"
+#include "src/write_unicoc_manually.h"
+#include "src/copy_to_unicoc.h"
