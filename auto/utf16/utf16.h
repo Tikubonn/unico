@@ -1,5 +1,4 @@
 #pragma once
-#include "src/make_unicos_utf16.h"
-#include "src/free_unicos_utf16.h"
-#include "src/copy_unicos_utf16.h"
-#include "src/put_unicos_utf16.h"
+#include "src/put_unicop_utf16.h"
+#include "src/put_unicob_as_utf16.h"
+#include "src/put_bom_unicob_as_utf16.h"

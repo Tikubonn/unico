@@ -1,5 +1,5 @@
 #include <unico.h>
 
-void clear_unicos (unicos *uni){
-	uni->address = uni->address_beginning;
+void clear_unicos (unicos *uniout){
+	uniout->address = uniout->address_beginning;
 }

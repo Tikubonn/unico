@@ -1,4 +1,3 @@
-#pragma once
 #include <unico.h>
 #include <stdio.h>
 

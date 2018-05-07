@@ -1,24 +1,28 @@
 #include <unico.h>
 #include <stdio.h>
 
-void print_unicos_as_utf8 (unicos *unis, FILE *stream){
-	make_tmp_unicoc(unic, 128);
-	size_t sizea = size_unicos(unis);
-	size_t indexa;
-	for (indexa = 0; indexa < sizea; indexa++){
-		unico uni = get_unicos(indexa, unis);
-		clear_unicoc(unic);
-		put_unicoc_as_utf8(uni, unic);
-		size_t sizeb = size_unicoc(unic);
-		size_t indexb;
-		for (indexb = 0; indexb < sizeb; indexb++){
-			unsigned char character = get_unicoc(indexb, unic);
-			fputc(character, stream);
-		}
+static void print_unicos_as_utf8_in (unicob *uni, FILE *stream){
+	size_t size = size_unicob(uni);
+	size_t index;
+	for (index = 0; index < size; index++){
+		unsigned char code = get_unicob(index, uni);
+		fputc(code, stream);
+	}
+}
+
+void print_unicos_as_utf8 (unicos *uni, FILE *stream){
+	make_tmp_unicob(temp, 16);
+	size_t size = size_unicos(uni);
+	size_t index;
+	for (index = 0; index < size; index++){
+		clear_unicob(temp);
+		unico code = get_unicos(index, uni);
+		put_unicob_as_utf8_manually(code, temp);
+		print_unicos_as_utf8_in(temp, stream);
 	}
 }
 
 void print_unicos_as_utf8_ln (unicos *uni, FILE *stream){
 	print_unicos_as_utf8(uni, stream);
-	fputc('\n', stream);
+	fputs("\n", stream);
 }

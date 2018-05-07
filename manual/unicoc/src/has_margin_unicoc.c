@@ -1,10 +1,10 @@
 #include <unico.h>
 #include <stddef.h>
 
-int has_margin_unicoc (unicoc *uni){
-	return uni->address < uni->address_end;
+extern int has_margin_unicoc (unicoc *uni){
+	return has_margin_unicos(uni->unicos);
 }
 
-int has_margins_unicoc (size_t size, unicoc *uni){
-	return uni->address + size < uni->address_end;
+extern int has_margins_unicoc (size_t size, unicoc *uni){
+	return has_margins_unicos(size, uni->unicos);
 }

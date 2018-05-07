@@ -1,4 +1,4 @@
-#pragma once
 #include <unico.h>
+#include <stdlib.h>
 
-void free_unicos (unicos*);
+extern void free_unicos (unicos*);

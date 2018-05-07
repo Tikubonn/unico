@@ -1,10 +1,10 @@
 #pragma once
-#include <unico.h>
-#define UNICOS_UTF8_SYNTAX_ERROR 0x11
+#define UNICOP_UTF8_ERROR 0x11
+#define UNICOP_UTF8_SYNTAX_ERROR 0x12
 
-typedef struct unicos_utf8 {
-	unicos unicos;
-	unico value;
-	unsigned int bom;
-	unsigned int count;
-} unicos_utf8;
+typedef struct unicop_utf8 {
+	unicos *unicos;
+	unico code;
+	int count;
+	int bom;
+} unicop_utf8;

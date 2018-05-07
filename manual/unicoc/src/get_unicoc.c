@@ -1,8 +1,10 @@
 #include <unico.h>
 #include <stddef.h>
 
-unsigned char get_unicoc (size_t index, unicoc *uni){
-	if (index < size_unicoc(uni))
-		return uni->address_beginning[index];
+unico get_unicoc (size_t index, unicoc *uni){
+	size_t size = size_unicoc(uni);
+	if (index < size){
+		return get_unicos(uni->beginning + index, uni->unicos);
+	}
 	return 0;
 }

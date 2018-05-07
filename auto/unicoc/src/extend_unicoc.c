@@ -1,20 +1,11 @@
 #include <unico.h>
 #include <stddef.h>
-#include <stdlib.h>
 
-int extend_unicoc (size_t size, unicoc *uni){
-	unsigned char *sequence = realloc(uni->address_beginning, size * sizeof(char));
-	if (sequence == NULL) return 1;
-	if (sequence == uni->address_beginning){
-		uni->address_end = sequence + size;
-		return 0;
+int extend_unicoc (size_t size, unicoc *uniout){
+	size_t si = size_unicoc(uniout);
+	if (si < size){
+		size_t sio = real_size_unicos(uniout->unicos);
+		return extend_unicos(sio + size - si, uniout->unicos);
 	}
-	else {
-		unicoc unia;
-		init_unicoc(sequence, size, &unia);
-		copy_unicoc_manually(uni, &unia);
-		free(uni->address_beginning);
-		copy_to_unicoc(&unia, uni);
-		return 0;
-	}
+	return 1;
 }

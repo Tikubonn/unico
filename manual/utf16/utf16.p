@@ -1,14 +1,14 @@
 #pragma once
-#include <unico.h>
-#define UNICOS_UTF16_BOM_ENDIAN 0
-#define UNICOS_UTF16_BIG_ENDIAN 1
-#define UNICOS_UTF16_LITTLE_ENDIAN 2
-#define UNICOS_UTF16_SYNTAX_ERROR 0x11
+#define UNICOP_UTF16_ERROR 0x11
+#define UNICOP_UTF16_SYNTAX_ERROR 0x12
+#define UNICOP_UTF16_BOM_ENDIAN 0
+#define UNICOP_UTF16_BIG_ENDIAN 1
+#define UNICOP_UTF16_LITTLE_ENDIAN 2
 
-typedef struct unicos_utf16 {
-	unicos unicos;
+typedef struct unicop_utf16 {
+	unicos *unicos;
+	unico code1;
+	unico code2;
 	int endian;
 	int count;
-	unico value1;
-	unico value2;
-} unicos_utf16;
+} unicop_utf16;
