@@ -22,7 +22,7 @@ int put_unicop_utf8_manually (unsigned char character, unicop_utf8 *uniout){
 			int width = width_of_char_unicop_utf8(character);
 			int code = (uniout->code << width) | value;
 			if (is_bom_unicode_unicop_utf8(code)){
-				if (uniout->bom)
+				if (size_unicos(uniout->unicos) || uniout->bom)
 					return UNICOP_UTF8_SYNTAX_ERROR;
 				uniout->bom = 1;
 				uniout->code = 0;

@@ -131,9 +131,14 @@ static int put_unicop_utf16_manually_le (unsigned char character, unicop_utf16 *
 
 int put_unicop_utf16_manually (unsigned char character, unicop_utf16 *uniout){
 	switch (uniout->endian){
-		case UNICOP_UTF16_BOM_ENDIAN: return put_unicop_utf16_manually_bom(character, uniout);
-		case UNICOP_UTF16_BIG_ENDIAN: return put_unicop_utf16_manually_be(character, uniout);
-		case UNICOP_UTF16_LITTLE_ENDIAN: return put_unicop_utf16_manually_le(character, uniout);
+		case UNICOP_UTF16_BOM_ENDIAN: 
+			if (size_unicos(uniout->unicos) == 0)
+				return put_unicop_utf16_manually_bom(character, uniout);
+			return UNICOP_UTF16_SYNTAX_ERROR;
+		case UNICOP_UTF16_BIG_ENDIAN: 
+			return put_unicop_utf16_manually_be(character, uniout);
+		case UNICOP_UTF16_LITTLE_ENDIAN: 
+			return put_unicop_utf16_manually_le(character, uniout);
 		default: return UNICOP_UTF16_ERROR;
 	}
 }
