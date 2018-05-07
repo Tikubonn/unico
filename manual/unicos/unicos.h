@@ -73,3 +73,4 @@
 #include "src-operator/is_empty_unicos.h"
 #include "src-operator/is_contain_unicos.h"
 #include "src-operator/position_unicos.h"
+#include "src/focus_unicos.h"
