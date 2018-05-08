@@ -239,14 +239,14 @@ int main (){
 		free_unicos(uni);
 	}
 	
-	/* replace */
+	/* sub */
 	
 	{
 		unico data1[] = { 0, 1, 2, 3, 4, 5 };
 		unico data2[] = { 10, 10, 10 };
 		unicos *uni = make_unicos(10);
 		test2(inserts_unicos_manually(data1, sizeof(data1) / sizeof(unico), 0, uni), 0);
-		test2(replace_unicos_manually(data2, sizeof(data2) / sizeof(unico), 0, 0, uni), 0);
+		test2(sub_unicos_manually(data2, sizeof(data2) / sizeof(unico), 0, 0, uni), 0);
 		test2(size_unicos(uni), 9);
 		test2(real_size_unicos(uni), 10);
 		test2(get_unicos(0, uni), 10);
@@ -266,7 +266,7 @@ int main (){
 		unico data2[] = { 10, 10, 10 };
 		unicos *uni = make_unicos(10);
 		test2(inserts_unicos_manually(data1, sizeof(data1) / sizeof(unico), 0, uni), 0);
-		test2(replace_unicos_manually(data2, sizeof(data2) / sizeof(unico), 0, 3, uni), 0);
+		test2(sub_unicos_manually(data2, sizeof(data2) / sizeof(unico), 0, 3, uni), 0);
 		test2(size_unicos(uni), 6);
 		test2(real_size_unicos(uni), 10);
 		test2(get_unicos(0, uni), 10);
@@ -283,7 +283,7 @@ int main (){
 		unico data2[] = { 10, 10, 10 };
 		unicos *uni = make_unicos(10);
 		test2(inserts_unicos_manually(data1, sizeof(data1) / sizeof(unico), 0, uni), 0);
-		test2(replace_unicos_manually(data2, sizeof(data2) / sizeof(unico), 0, 6, uni), 0);
+		test2(sub_unicos_manually(data2, sizeof(data2) / sizeof(unico), 0, 6, uni), 0);
 		test2(size_unicos(uni), 3);
 		test2(real_size_unicos(uni), 10);
 		test2(get_unicos(0, uni), 10);
@@ -297,7 +297,7 @@ int main (){
 		unico data2[] = { 10, 10, 10 };
 		unicos *uni = make_unicos(10);
 		test2(inserts_unicos_manually(data1, sizeof(data1) / sizeof(unico), 0, uni), 0);
-		test2(replace_unicos_manually(data2, sizeof(data2) / sizeof(unico), 0, -1, uni), 0);
+		test2(sub_unicos_manually(data2, sizeof(data2) / sizeof(unico), 0, -1, uni), 0);
 		test2(size_unicos(uni), 3);
 		test2(real_size_unicos(uni), 10);
 		test2(get_unicos(0, uni), 10);
@@ -311,7 +311,7 @@ int main (){
 		unico data2[] = { 10, 10, 10 };
 		unicos *uni = make_unicos(10);
 		test2(inserts_unicos_manually(data1, sizeof(data1) / sizeof(unico), 0, uni), 0);
-		test2(replace_unicos_manually(data2, sizeof(data2) / sizeof(unico), 1, 0, uni), 0);
+		test2(sub_unicos_manually(data2, sizeof(data2) / sizeof(unico), 1, 0, uni), 0);
 		test2(size_unicos(uni), 9);
 		test2(real_size_unicos(uni), 10);
 		test2(get_unicos(0, uni), 0);
@@ -331,7 +331,7 @@ int main (){
 		unico data2[] = { 10, 10, 10 };
 		unicos *uni = make_unicos(10);
 		test2(inserts_unicos_manually(data1, sizeof(data1) / sizeof(unico), 0, uni), 0);
-		test2(replace_unicos_manually(data2, sizeof(data2) / sizeof(unico), 1, 3, uni), 0);
+		test2(sub_unicos_manually(data2, sizeof(data2) / sizeof(unico), 1, 3, uni), 0);
 		test2(size_unicos(uni), 6);
 		test2(real_size_unicos(uni), 10);
 		test2(get_unicos(0, uni), 0);
@@ -348,7 +348,7 @@ int main (){
 		unico data2[] = { 10, 10, 10 };
 		unicos *uni = make_unicos(10);
 		test2(inserts_unicos_manually(data1, sizeof(data1) / sizeof(unico), 0, uni), 0);
-		test2(replace_unicos_manually(data2, sizeof(data2) / sizeof(unico), 1, 6, uni), 0);
+		test2(sub_unicos_manually(data2, sizeof(data2) / sizeof(unico), 1, 6, uni), 0);
 		test2(size_unicos(uni), 4);
 		test2(real_size_unicos(uni), 10);
 		test2(get_unicos(0, uni), 0);
@@ -363,7 +363,7 @@ int main (){
 		unico data2[] = { 10, 10, 10 };
 		unicos *uni = make_unicos(10);
 		test2(inserts_unicos_manually(data1, sizeof(data1) / sizeof(unico), 0, uni), 0);
-		test2(replace_unicos_manually(data2, sizeof(data2) / sizeof(unico), 6, 0, uni), 0);
+		test2(sub_unicos_manually(data2, sizeof(data2) / sizeof(unico), 6, 0, uni), 0);
 		test2(size_unicos(uni), 9);
 		test2(real_size_unicos(uni), 10);
 		test2(get_unicos(0, uni), 0);
@@ -383,7 +383,7 @@ int main (){
 		unico data2[] = { 10, 10, 10 };
 		unicos *uni = make_unicos(10);
 		test2(inserts_unicos_manually(data1, sizeof(data1) / sizeof(unico), 0, uni), 0);
-		test2(replace_unicos_manually(data2, sizeof(data2) / sizeof(unico), -1, 0, uni), 0);
+		test2(sub_unicos_manually(data2, sizeof(data2) / sizeof(unico), -1, 0, uni), 0);
 		test2(size_unicos(uni), 9);
 		test2(real_size_unicos(uni), 10);
 		test2(get_unicos(0, uni), 0);
@@ -403,7 +403,7 @@ int main (){
 		unico data2[] = { 10, 10, 10 };
 		unicos *uni = make_unicos(10);
 		test2(inserts_unicos_manually(data1, sizeof(data1) / sizeof(unico), 0, uni), 0);
-		test2(replace_unicos_manually(data2, sizeof(data2) / sizeof(unico), 6, 9, uni), 0);
+		test2(sub_unicos_manually(data2, sizeof(data2) / sizeof(unico), 6, 9, uni), 0);
 		test2(size_unicos(uni), 9);
 		test2(real_size_unicos(uni), 10);
 		test2(get_unicos(0, uni), 0);
@@ -423,7 +423,7 @@ int main (){
 		unico data2[] = { 10, 10, 10 };
 		unicos *uni = make_unicos(10);
 		test2(inserts_unicos_manually(data1, sizeof(data1) / sizeof(unico), 0, uni), 0);
-		test2(replace_unicos_manually(data2, sizeof(data2) / sizeof(unico), -1, 9, uni), 0);
+		test2(sub_unicos_manually(data2, sizeof(data2) / sizeof(unico), -1, 9, uni), 0);
 		test2(size_unicos(uni), 9);
 		test2(real_size_unicos(uni), 10);
 		test2(get_unicos(0, uni), 0);
@@ -443,7 +443,7 @@ int main (){
 		unico data2[] = { 10, 10, 10 };
 		unicos *uni = make_unicos(10);
 		test2(inserts_unicos_manually(data1, sizeof(data1) / sizeof(unico), 0, uni), 0);
-		test2(replace_unicos_manually(data2, sizeof(data2) / sizeof(unico), -1, -1, uni), 0);
+		test2(sub_unicos_manually(data2, sizeof(data2) / sizeof(unico), -1, -1, uni), 0);
 		test2(size_unicos(uni), 9);
 		test2(real_size_unicos(uni), 10);
 		test2(get_unicos(0, uni), 0);
@@ -1167,7 +1167,7 @@ int main (){
 		free_unicos(uni);
 	}
 	
-	/* unicoc replace */
+	/* unicoc sub */
 	
 	{
 		unico data1[] = { 0x41, 0x42, 0x43 };
@@ -1176,7 +1176,7 @@ int main (){
 		test2(inserts_unicos_manually(data1, sizeof(data1) / sizeof(unico), 0, uni), 0);
 		unicoc unic;
 		test2(get_unicoc_from_unicos(0, uni, &unic), 0);
-		test2(replace_unicoc_manually(data2, sizeof(data2) / sizeof(unico), 0, 0, &unic), 0);
+		test2(sub_unicoc_manually(data2, sizeof(data2) / sizeof(unico), 0, 0, &unic), 0);
 		test2(size_unicoc(&unic), 3);
 		test2(size_unicos(uni), 3 + 2);
 		free_unicos(uni);
@@ -1189,7 +1189,7 @@ int main (){
 		test2(inserts_unicos_manually(data1, sizeof(data1) / sizeof(unico), 0, uni), 0);
 		unicoc unic;
 		test2(get_unicoc_from_unicos(0, uni, &unic), 0);
-		test2(replace_unicoc_manually(data2, sizeof(data2) / sizeof(unico), 0, 1, &unic), 0);
+		test2(sub_unicoc_manually(data2, sizeof(data2) / sizeof(unico), 0, 1, &unic), 0);
 		test2(size_unicoc(&unic), 2);
 		test2(size_unicos(uni), 2 + 2);
 		free_unicos(uni);
@@ -1202,7 +1202,7 @@ int main (){
 		test2(inserts_unicos_manually(data1, sizeof(data1) / sizeof(unico), 0, uni), 0);
 		unicoc unic;
 		test2(get_unicoc_from_unicos(0, uni, &unic), 0);
-		test2(replace_unicoc_manually(data2, sizeof(data2) / sizeof(unico), 0, -1, &unic), 0);
+		test2(sub_unicoc_manually(data2, sizeof(data2) / sizeof(unico), 0, -1, &unic), 0);
 		test2(size_unicoc(&unic), 2);
 		test2(size_unicos(uni), 2 + 2);
 		free_unicos(uni);
@@ -1215,7 +1215,7 @@ int main (){
 		test2(inserts_unicos_manually(data1, sizeof(data1) / sizeof(unico), 0, uni), 0);
 		unicoc unic;
 		test2(get_unicoc_from_unicos(0, uni, &unic), 0);
-		test2(replace_unicoc_manually(data2, sizeof(data2) / sizeof(unico), 1, 0, &unic), 0);
+		test2(sub_unicoc_manually(data2, sizeof(data2) / sizeof(unico), 1, 0, &unic), 0);
 		test2(size_unicoc(&unic), 3);
 		test2(size_unicos(uni), 3 + 2);
 		free_unicos(uni);
@@ -1228,7 +1228,7 @@ int main (){
 		test2(inserts_unicos_manually(data1, sizeof(data1) / sizeof(unico), 0, uni), 0);
 		unicoc unic;
 		test2(get_unicoc_from_unicos(0, uni, &unic), 0);
-		test2(replace_unicoc_manually(data2, sizeof(data2) / sizeof(unico), 1, 1, &unic), 0);
+		test2(sub_unicoc_manually(data2, sizeof(data2) / sizeof(unico), 1, 1, &unic), 0);
 		test2(size_unicoc(&unic), 3);
 		test2(size_unicos(uni), 3 + 2);
 		free_unicos(uni);
@@ -1241,7 +1241,7 @@ int main (){
 		test2(inserts_unicos_manually(data1, sizeof(data1) / sizeof(unico), 0, uni), 0);
 		unicoc unic;
 		test2(get_unicoc_from_unicos(0, uni, &unic), 0);
-		test2(replace_unicoc_manually(data2, sizeof(data2) / sizeof(unico), -1, -1, &unic), 0);
+		test2(sub_unicoc_manually(data2, sizeof(data2) / sizeof(unico), -1, -1, &unic), 0);
 		test2(size_unicoc(&unic), 3);
 		test2(size_unicos(uni), 3 + 2);
 		free_unicos(uni);

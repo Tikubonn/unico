@@ -47,5 +47,5 @@ def write2 (depth, node, stream):
 		stream.write(", ".join([ "0x%x" % num for num in node.data ]))
 		stream.write("};\n")
 		stream.write("*indexout = index + %d;\n" % (depth +1))
-		stream.write("return replace_unicos_manually(data, sizeof(data) / sizeof(unico), index, index +%d, uniout);\n" % (depth +1))
+		stream.write("return sub_unicos_manually(data, sizeof(data) / sizeof(unico), index, index +%d, uniout);\n" % (depth +1))
 		stream.write("}\n")

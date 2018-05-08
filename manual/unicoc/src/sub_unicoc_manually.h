@@ -1,0 +1,4 @@
+#include <unico.h>
+#include <stddef.h>
+
+extern int sub_unicoc_manually (unico*, size_t, size_t, size_t, unicoc*);

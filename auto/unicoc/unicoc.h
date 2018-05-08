@@ -2,7 +2,7 @@
 #include "src/extend_unicoc.h"
 #include "src/insert_unicoc.h"
 #include "src/inserts_unicoc.h"
-#include "src/replace_unicoc.h"
+#include "src/sub_unicoc.h"
 #include "src-convertion/upcase_unicoc.h"
 #include "src-convertion/downcase_unicoc.h"
 #include "src-convertion/foldcase_unicoc.h"

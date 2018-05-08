@@ -4,7 +4,7 @@
 #include "src/extend_unicos.h"
 #include "src/insert_unicos.h"
 #include "src/inserts_unicos.h"
-#include "src/replace_unicos.h"
+#include "src/sub_unicos.h"
 #include "src-convertion/upcase_unicos.h"
 #include "src-convertion/downcase_unicos.h"
 #include "src-convertion/foldcase_unicos.h"

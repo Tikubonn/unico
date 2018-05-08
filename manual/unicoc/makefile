@@ -15,8 +15,8 @@ clean:
 	rm -f compiled/init_unicoc.o
 	rm -f compiled/insert_unicoc_manually.o
 	rm -f compiled/inserts_unicoc_manually.o
-	rm -f compiled/replace_all_unicoc_manually.o
-	rm -f compiled/replace_unicoc_manually.o
+	rm -f compiled/sub_all_unicoc_manually.o
+	rm -f compiled/sub_unicoc_manually.o
 	rm -f compiled/set_unicoc.o
 	rm -f compiled/size_unicoc.o
 	rm -f compiled/has_margin_unicoc.o
@@ -37,8 +37,8 @@ clean:
 	rm -f compiled/upcase_size_unicoc.o
 	rm -f compiled/upcase_unicoc_manually.o
 
-unicoc.lib: compiled/drop_unicoc.o compiled/drops_unicoc.o compiled/get_unicoc.o compiled/has_base_unicoc.o compiled/has_combining_unicoc.o compiled/has_enclosing_combining_unicoc.o compiled/has_non_spacing_combining_unicoc.o compiled/has_spacing_combining_unicoc.o compiled/init_unicoc.o compiled/insert_unicoc_manually.o compiled/inserts_unicoc_manually.o compiled/replace_all_unicoc_manually.o compiled/replace_unicoc_manually.o compiled/set_unicoc.o compiled/size_unicoc.o compiled/has_margin_unicoc.o compiled/downcase_size_unicoc.o compiled/downcase_unicoc_manually.o compiled/foldcase_size_unicoc.o compiled/foldcase_unicoc_manually.o compiled/normalize_nfc_size_unicoc.o compiled/normalize_nfc_unicoc_manually.o compiled/normalize_nfd_size_unicoc.o compiled/normalize_nfd_unicoc_manually.o compiled/normalize_nfkc_size_unicoc.o compiled/normalize_nfkc_unicoc_manually.o compiled/normalize_nfkd_size_unicoc.o compiled/normalize_nfkd_unicoc_manually.o compiled/title_size_unicoc.o compiled/title_unicoc_manually.o compiled/upcase_size_unicoc.o compiled/upcase_unicoc_manually.o
-	ar r unicoc.lib compiled/drop_unicoc.o compiled/drops_unicoc.o compiled/get_unicoc.o compiled/has_base_unicoc.o compiled/has_combining_unicoc.o compiled/has_enclosing_combining_unicoc.o compiled/has_non_spacing_combining_unicoc.o compiled/has_spacing_combining_unicoc.o compiled/init_unicoc.o compiled/insert_unicoc_manually.o compiled/inserts_unicoc_manually.o compiled/replace_all_unicoc_manually.o compiled/replace_unicoc_manually.o compiled/set_unicoc.o compiled/size_unicoc.o compiled/has_margin_unicoc.o compiled/downcase_size_unicoc.o compiled/downcase_unicoc_manually.o compiled/foldcase_size_unicoc.o compiled/foldcase_unicoc_manually.o compiled/normalize_nfc_size_unicoc.o compiled/normalize_nfc_unicoc_manually.o compiled/normalize_nfd_size_unicoc.o compiled/normalize_nfd_unicoc_manually.o compiled/normalize_nfkc_size_unicoc.o compiled/normalize_nfkc_unicoc_manually.o compiled/normalize_nfkd_size_unicoc.o compiled/normalize_nfkd_unicoc_manually.o compiled/title_size_unicoc.o compiled/title_unicoc_manually.o compiled/upcase_size_unicoc.o compiled/upcase_unicoc_manually.o
+unicoc.lib: compiled/drop_unicoc.o compiled/drops_unicoc.o compiled/get_unicoc.o compiled/has_base_unicoc.o compiled/has_combining_unicoc.o compiled/has_enclosing_combining_unicoc.o compiled/has_non_spacing_combining_unicoc.o compiled/has_spacing_combining_unicoc.o compiled/init_unicoc.o compiled/insert_unicoc_manually.o compiled/inserts_unicoc_manually.o compiled/sub_all_unicoc_manually.o compiled/sub_unicoc_manually.o compiled/set_unicoc.o compiled/size_unicoc.o compiled/has_margin_unicoc.o compiled/downcase_size_unicoc.o compiled/downcase_unicoc_manually.o compiled/foldcase_size_unicoc.o compiled/foldcase_unicoc_manually.o compiled/normalize_nfc_size_unicoc.o compiled/normalize_nfc_unicoc_manually.o compiled/normalize_nfd_size_unicoc.o compiled/normalize_nfd_unicoc_manually.o compiled/normalize_nfkc_size_unicoc.o compiled/normalize_nfkc_unicoc_manually.o compiled/normalize_nfkd_size_unicoc.o compiled/normalize_nfkd_unicoc_manually.o compiled/title_size_unicoc.o compiled/title_unicoc_manually.o compiled/upcase_size_unicoc.o compiled/upcase_unicoc_manually.o
+	ar r unicoc.lib compiled/drop_unicoc.o compiled/drops_unicoc.o compiled/get_unicoc.o compiled/has_base_unicoc.o compiled/has_combining_unicoc.o compiled/has_enclosing_combining_unicoc.o compiled/has_non_spacing_combining_unicoc.o compiled/has_spacing_combining_unicoc.o compiled/init_unicoc.o compiled/insert_unicoc_manually.o compiled/inserts_unicoc_manually.o compiled/sub_all_unicoc_manually.o compiled/sub_unicoc_manually.o compiled/set_unicoc.o compiled/size_unicoc.o compiled/has_margin_unicoc.o compiled/downcase_size_unicoc.o compiled/downcase_unicoc_manually.o compiled/foldcase_size_unicoc.o compiled/foldcase_unicoc_manually.o compiled/normalize_nfc_size_unicoc.o compiled/normalize_nfc_unicoc_manually.o compiled/normalize_nfd_size_unicoc.o compiled/normalize_nfd_unicoc_manually.o compiled/normalize_nfkc_size_unicoc.o compiled/normalize_nfkc_unicoc_manually.o compiled/normalize_nfkd_size_unicoc.o compiled/normalize_nfkd_unicoc_manually.o compiled/title_size_unicoc.o compiled/title_unicoc_manually.o compiled/upcase_size_unicoc.o compiled/upcase_unicoc_manually.o
 
 compiled/drop_unicoc.o: src/drop_unicoc.c
 	$(CC) $(CFLAGS) -c src/drop_unicoc.c -o compiled/drop_unicoc.o
@@ -73,11 +73,11 @@ compiled/insert_unicoc_manually.o: src/insert_unicoc_manually.c
 compiled/inserts_unicoc_manually.o: src/inserts_unicoc_manually.c
 	$(CC) $(CFLAGS) -c src/inserts_unicoc_manually.c -o compiled/inserts_unicoc_manually.o
 
-compiled/replace_all_unicoc_manually.o: src/replace_all_unicoc_manually.c
-	$(CC) $(CFLAGS) -c src/replace_all_unicoc_manually.c -o compiled/replace_all_unicoc_manually.o
+compiled/sub_all_unicoc_manually.o: src/sub_all_unicoc_manually.c
+	$(CC) $(CFLAGS) -c src/sub_all_unicoc_manually.c -o compiled/sub_all_unicoc_manually.o
 
-compiled/replace_unicoc_manually.o: src/replace_unicoc_manually.c
-	$(CC) $(CFLAGS) -c src/replace_unicoc_manually.c -o compiled/replace_unicoc_manually.o
+compiled/sub_unicoc_manually.o: src/sub_unicoc_manually.c
+	$(CC) $(CFLAGS) -c src/sub_unicoc_manually.c -o compiled/sub_unicoc_manually.o
 
 compiled/set_unicoc.o: src/set_unicoc.c
 	$(CC) $(CFLAGS) -c src/set_unicoc.c -o compiled/set_unicoc.o
