@@ -6,8 +6,8 @@
 #define UNICOP_UTF32_LITTLE_ENDIAN 2
 
 typedef struct unicop_utf32 {
-	unicos *unicos;
-	unico code;
-	int endian;
-	int count;
+  unicos *unicos;
+  unico code;
+  int endian;
+  int count;
 } unicop_utf32;

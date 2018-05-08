@@ -2,12 +2,12 @@
 #include <stddef.h>
 
 int title_unicos (size_t index, size_t size, unicos *uniout){
-	int status = title_unicos_manually(index, size, uniout);
-	if (status){
-		size_t si = size_unicos(uniout);
-		int status = extend_unicos(si * 2, uniout);
-		if (status) return status;
-		return title_unicos(index, size, uniout);
-	}
-	return 0;
+  int status = title_unicos_manually(index, size, uniout);
+  if (status){
+    size_t si = size_unicos(uniout);
+    int status = extend_unicos(si * 2, uniout);
+    if (status) return status;
+    return title_unicos(index, size, uniout);
+  }
+  return 0;
 }
