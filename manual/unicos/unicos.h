@@ -49,8 +49,6 @@
 #include "src-convertion/upcase_size_unicos_in.h"
 #include "src-convertion/upcase_unicos_manually.h"
 #include "src-convertion/upcase_unicos_manually_in.h"
-#include "src/equal_unicos.h"
-#include "src/unequal_unicos.h"
 #include "src-convertion/is_downcase_unicos.h"
 #include "src-convertion/is_downcase_unicos_in.h"
 #include "src-convertion/is_foldcase_unicos.h"
