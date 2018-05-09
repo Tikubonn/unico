@@ -73,7 +73,6 @@ clean:
 	rm -f compiled/is_upcase_unicos.o
 	rm -f compiled/is_upcase_unicos_in.o
 	make -C src-groups clean
-	make -C src-comparison clean
 	rm -f compiled/equal_unicos_as_primary.o
 	rm -f compiled/equal_unicos_as_secondary.o
 	rm -f compiled/equal_unicos_as_tertiary.o

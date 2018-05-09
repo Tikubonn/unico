@@ -3,7 +3,7 @@ def write (name, node, stream):
   
   stream.write("#include <unico.h>\n")
   stream.write("#include <stddef.h>\n")
-  stream.write("int %s (unicos *uni, size_t index, size_t end){\n" % name)
+  stream.write("int %s (size_t index, size_t end, unicos *uni){\n" % name)
   write1(node, stream)
   stream.write("return 0;\n")
   stream.write("}\n")

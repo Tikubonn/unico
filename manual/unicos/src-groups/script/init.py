@@ -43,7 +43,8 @@ for fname in os.listdir("json"):
     ("is_%s_unicos.py" % (name,),
      "lib/node.py",
      "lib/generator/predicate_function.py",
-     "lib/generator/predicate_function_declaration.py",),
+     "lib/generator/predicate_function_declaration.py",
+     "json/%s.json" % (name,)),
     ("$(PYTHON) is_%s_unicos.py" % (name,),))
   
   make_script.add_recipe(recipe)
@@ -68,7 +69,8 @@ for fname in os.listdir("json"):
   
   recipe = makefile.recipe(
     "compiled/is_%s_unicos.o" % (name,),
-    ("is_%s_unicos.c" % (name,),),
+    ("is_%s_unicos.c" % (name,), 
+     "is_%s_unicos.h" % (name,)),
     ("$(CC) $(CFLAGS) -c is_%s_unicos.c -o compiled/is_%s_unicos.o" % (name, name,),))
 
   make_src.add_independ_recipe(recipe)

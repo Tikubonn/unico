@@ -1,5 +1,5 @@
 #include <unico.h>
 #include <stddef.h>
-int is_ogham_unicos (unicos *uni, size_t index, size_t end){
+int is_ogham_unicos (size_t index, size_t end, unicos *uni){
 return 0;
 }

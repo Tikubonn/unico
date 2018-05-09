@@ -1,6 +1,6 @@
 #include <unico.h>
 #include <stddef.h>
-int is_oriya_unicos (unicos *uni, size_t index, size_t end){
+int is_oriya_unicos (size_t index, size_t end, unicos *uni){
 if (1 == end - index){
 switch (get_unicos(index, uni)){
 case 0xb47:

@@ -1,6 +1,6 @@
 #include <unico.h>
 #include <stddef.h>
-int is_telugu_unicos (unicos *uni, size_t index, size_t end){
+int is_telugu_unicos (size_t index, size_t end, unicos *uni){
 if (1 == end - index){
 switch (get_unicos(index, uni)){
 case 0xc46:

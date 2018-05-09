@@ -1,5 +1,5 @@
 #include <unico.h>
 #include <stddef.h>
-int is_lydian_unicos (unicos *uni, size_t index, size_t end){
+int is_lydian_unicos (size_t index, size_t end, unicos *uni){
 return 0;
 }

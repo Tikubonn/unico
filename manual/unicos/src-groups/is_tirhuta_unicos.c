@@ -1,6 +1,6 @@
 #include <unico.h>
 #include <stddef.h>
-int is_tirhuta_unicos (unicos *uni, size_t index, size_t end){
+int is_tirhuta_unicos (size_t index, size_t end, unicos *uni){
 if (1 == end - index){
 switch (get_unicos(index, uni)){
 case 0x114b9:

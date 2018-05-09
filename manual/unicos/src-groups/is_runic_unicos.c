@@ -1,5 +1,5 @@
 #include <unico.h>
 #include <stddef.h>
-int is_runic_unicos (unicos *uni, size_t index, size_t end){
+int is_runic_unicos (size_t index, size_t end, unicos *uni){
 return 0;
 }
