@@ -19,12 +19,13 @@ clean:
 
 tmp = $(shell mktemp -d)
 
-dist/unico.lib: manual/unico/unico.lib manual/unicos/unicos.lib manual/unicos/src-groups/groups.lib manual/unicoc/unicoc.lib manual/unicob/unicob.lib manual/utf8/utf8.lib manual/utf16/utf16.lib manual/utf32/utf32.lib auto/unicos/unicos.lib auto/unicoc/unicoc.lib auto/unicob/unicob.lib auto/utf8/utf8.lib auto/utf16/utf16.lib auto/utf32/utf32.lib debug/debug.lib
+dist/unico.lib: manual/unico/unico.lib manual/unicos/unicos.lib manual/unicos/src-groups/groups.lib manual/unicoc/unicoc.lib manual/unicoc/src-groups/groups.lib manual/unicob/unicob.lib manual/utf8/utf8.lib manual/utf16/utf16.lib manual/utf32/utf32.lib auto/unicos/unicos.lib auto/unicoc/unicoc.lib auto/unicob/unicob.lib auto/utf8/utf8.lib auto/utf16/utf16.lib auto/utf32/utf32.lib debug/debug.lib
 	cd $(tmp) && \
 ar xv $(ROOTDIR)/manual/unico/unico.lib && \
 ar xv $(ROOTDIR)/manual/unicos/unicos.lib && \
 ar xv $(ROOTDIR)/manual/unicos/src-groups/groups.lib && \
 ar xv $(ROOTDIR)/manual/unicoc/unicoc.lib && \
+ar xv $(ROOTDIR)/manual/unicoc/src-groups/groups.lib && \
 ar xv $(ROOTDIR)/manual/unicob/unicob.lib && \
 ar xv $(ROOTDIR)/manual/utf8/utf8.lib && \
 ar xv $(ROOTDIR)/manual/utf16/utf16.lib && \
@@ -38,12 +39,13 @@ ar xv $(ROOTDIR)/auto/utf32/utf32.lib && \
 ar xv $(ROOTDIR)/debug/debug.lib && \
 ar r $(ROOTDIR)/dist/unico.lib *.o
 
-dist/unico.dll: manual/unico/unico.lib manual/unicos/unicos.lib manual/unicos/src-groups/groups.lib manual/unicoc/unicoc.lib manual/unicob/unicob.lib manual/utf8/utf8.lib manual/utf16/utf16.lib manual/utf32/utf32.lib auto/unicos/unicos.lib auto/unicoc/unicoc.lib auto/unicob/unicob.lib auto/utf8/utf8.lib auto/utf16/utf16.lib auto/utf32/utf32.lib debug/debug.lib
+dist/unico.dll: manual/unico/unico.lib manual/unicos/unicos.lib manual/unicos/src-groups/groups.lib manual/unicoc/unicoc.lib manual/unicoc/src-groups/groups.lib manual/unicob/unicob.lib manual/utf8/utf8.lib manual/utf16/utf16.lib manual/utf32/utf32.lib auto/unicos/unicos.lib auto/unicoc/unicoc.lib auto/unicob/unicob.lib auto/utf8/utf8.lib auto/utf16/utf16.lib auto/utf32/utf32.lib debug/debug.lib
 	cd $(tmp) && \
 ar xv $(ROOTDIR)/manual/unico/unico.lib && \
 ar xv $(ROOTDIR)/manual/unicos/unicos.lib && \
 ar xv $(ROOTDIR)/manual/unicos/src-groups/groups.lib && \
 ar xv $(ROOTDIR)/manual/unicoc/unicoc.lib && \
+ar xv $(ROOTDIR)/manual/unicoc/src-groups/groups.lib && \
 ar xv $(ROOTDIR)/manual/unicob/unicob.lib && \
 ar xv $(ROOTDIR)/manual/utf8/utf8.lib && \
 ar xv $(ROOTDIR)/manual/utf16/utf16.lib && \
