@@ -457,32 +457,6 @@ int main (){
     test2(get_unicos(8, uni), 10);
     free_unicos(uni);
   }
-
-  /* equal */
-  
-  {
-    unico data1[] = { 0, 1, 2, 3, 4, 5 };
-    unico data2[] = { 0, 1, 2, 3, 4, 5 };
-    unicos *unia = make_unicos(10);
-    unicos *unib = make_unicos(10);
-    test2(inserts_unicos_manually(data1, sizeof(data1) / sizeof(unico), 0, unia), 0);
-    test2(inserts_unicos_manually(data2, sizeof(data2) / sizeof(unico), 0, unib), 0);
-    test(equal_unicos(unia, unib));
-    free_unicos(unia);
-    free_unicos(unib);
-  }
-  
-  {
-    unico data1[] = { 0, 1, 2, 3, 4, 5 };
-    unico data2[] = { 0, 1, 2, 0, 4, 5 };
-    unicos *unia = make_unicos(10);
-    unicos *unib = make_unicos(10);
-    test2(inserts_unicos_manually(data1, sizeof(data1) / sizeof(unico), 0, unia), 0);
-    test2(inserts_unicos_manually(data2, sizeof(data2) / sizeof(unico), 0, unib), 0);
-    test(!equal_unicos(unia, unib));
-    free_unicos(unia);
-    free_unicos(unib);
-  }
   
   /* upcase */
   
