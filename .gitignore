@@ -2,4 +2,7 @@
 *.dll
 *.lib
 *.exe
+*.pyc
 make.exe.stackdump
+__pycache__
+__pycache__/*
