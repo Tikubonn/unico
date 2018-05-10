@@ -6,7 +6,7 @@
 #include "src-convertion/upcase_unicoc.h"
 #include "src-convertion/downcase_unicoc.h"
 #include "src-convertion/foldcase_unicoc.h"
-#include "src-convertion/title_unicoc.h"
+#include "src-convertion/titlecase_unicoc.h"
 #include "src-convertion/normalize_nfc_unicoc.h"
 #include "src-convertion/normalize_nfd_unicoc.h"
 #include "src-convertion/normalize_nfkc_unicoc.h"

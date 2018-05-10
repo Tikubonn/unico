@@ -48,10 +48,10 @@ clean:
 	rm -f compiled/normalize_nfkd_size_unicos_in.o
 	rm -f compiled/normalize_nfkd_unicos_manually.o
 	rm -f compiled/normalize_nfkd_unicos_manually_in.o
-	rm -f compiled/title_size_unicos.o
-	rm -f compiled/title_size_unicos_in.o
-	rm -f compiled/title_unicos_manually.o
-	rm -f compiled/title_unicos_manually_in.o
+	rm -f compiled/titlecase_size_unicos.o
+	rm -f compiled/titlecase_size_unicos_in.o
+	rm -f compiled/titlecase_unicos_manually.o
+	rm -f compiled/titlecase_unicos_manually_in.o
 	rm -f compiled/upcase_size_unicos.o
 	rm -f compiled/upcase_size_unicos_in.o
 	rm -f compiled/upcase_unicos_manually.o
@@ -68,8 +68,8 @@ clean:
 	rm -f compiled/is_normalize_nfkc_unicos_in.o
 	rm -f compiled/is_normalize_nfkd_unicos.o
 	rm -f compiled/is_normalize_nfkd_unicos_in.o
-	rm -f compiled/is_title_unicos.o
-	rm -f compiled/is_title_unicos_in.o
+	rm -f compiled/is_titlecase_unicos.o
+	rm -f compiled/is_titlecase_unicos_in.o
 	rm -f compiled/is_upcase_unicos.o
 	rm -f compiled/is_upcase_unicos_in.o
 	make -C src-groups clean
@@ -86,8 +86,8 @@ clean:
 	rm -f compiled/unequal_unicos.o
 	rm -f compiled/unequalp_unicos.o
 
-unicos.lib: compiled/clear_unicos.o compiled/copy_unicos_manually.o compiled/drop_unicos.o compiled/drops_unicos.o compiled/get_insertion_unicoc_from_unicos.o compiled/get_unicoc_from_unicos.o compiled/get_unicos.o compiled/has_margin_unicos.o compiled/init_unicos.o compiled/insert_unicos_manually.o compiled/inserts_unicos_manually.o compiled/length_unicos.o compiled/next_unicos.o compiled/sub_unicos_manually.o compiled/set_unicos.o compiled/size_unicos.o compiled/swap_unicos.o compiled/downcase_size_unicos.o compiled/downcase_size_unicos_in.o compiled/downcase_unicos_manually.o compiled/downcase_unicos_manually_in.o compiled/foldcase_size_unicos.o compiled/foldcase_size_unicos_in.o compiled/foldcase_unicos_manually.o compiled/foldcase_unicos_manually_in.o compiled/normalize_nfc_size_unicos.o compiled/normalize_nfc_size_unicos_in.o compiled/normalize_nfc_unicos_manually.o compiled/normalize_nfc_unicos_manually_in.o compiled/normalize_nfd_size_unicos.o compiled/normalize_nfd_size_unicos_in.o compiled/normalize_nfd_unicos_manually.o compiled/normalize_nfd_unicos_manually_in.o compiled/normalize_nfkc_size_unicos.o compiled/normalize_nfkc_size_unicos_in.o compiled/normalize_nfkc_unicos_manually.o compiled/normalize_nfkc_unicos_manually_in.o compiled/normalize_nfkd_size_unicos.o compiled/normalize_nfkd_size_unicos_in.o compiled/normalize_nfkd_unicos_manually.o compiled/normalize_nfkd_unicos_manually_in.o compiled/title_size_unicos.o compiled/title_size_unicos_in.o compiled/title_unicos_manually.o compiled/title_unicos_manually_in.o compiled/upcase_size_unicos.o compiled/upcase_size_unicos_in.o compiled/upcase_unicos_manually.o compiled/upcase_unicos_manually_in.o compiled/is_downcase_unicos.o compiled/is_downcase_unicos_in.o compiled/is_foldcase_unicos.o compiled/is_foldcase_unicos_in.o compiled/is_normalize_nfc_unicos.o compiled/is_normalize_nfc_unicos_in.o compiled/is_normalize_nfd_unicos.o compiled/is_normalize_nfd_unicos_in.o compiled/is_normalize_nfkc_unicos.o compiled/is_normalize_nfkc_unicos_in.o compiled/is_normalize_nfkd_unicos.o compiled/is_normalize_nfkd_unicos_in.o compiled/is_title_unicos.o compiled/is_title_unicos_in.o compiled/is_upcase_unicos.o compiled/is_upcase_unicos_in.o compiled/equal_unicos_as_primary.o compiled/equal_unicos_as_secondary.o compiled/equal_unicos_as_tertiary.o compiled/equal_unicos_as_quaternary.o compiled/equal_unicos_as_expansion_primary.o compiled/equal_unicos_as_expansion_secondary.o compiled/equal_unicos_as_expansion_tertiary.o compiled/equal_unicos_as_expansion_quaternary.o compiled/equal_unicos.o compiled/equalp_unicos.o compiled/unequal_unicos.o compiled/unequalp_unicos.o
-	ar r unicos.lib compiled/clear_unicos.o compiled/copy_unicos_manually.o compiled/drop_unicos.o compiled/drops_unicos.o compiled/get_insertion_unicoc_from_unicos.o compiled/get_unicoc_from_unicos.o compiled/get_unicos.o compiled/has_margin_unicos.o compiled/init_unicos.o compiled/insert_unicos_manually.o compiled/inserts_unicos_manually.o compiled/length_unicos.o compiled/next_unicos.o compiled/sub_unicos_manually.o compiled/set_unicos.o compiled/size_unicos.o compiled/swap_unicos.o compiled/downcase_size_unicos.o compiled/downcase_size_unicos_in.o compiled/downcase_unicos_manually.o compiled/downcase_unicos_manually_in.o compiled/foldcase_size_unicos.o compiled/foldcase_size_unicos_in.o compiled/foldcase_unicos_manually.o compiled/foldcase_unicos_manually_in.o compiled/normalize_nfc_size_unicos.o compiled/normalize_nfc_size_unicos_in.o compiled/normalize_nfc_unicos_manually.o compiled/normalize_nfc_unicos_manually_in.o compiled/normalize_nfd_size_unicos.o compiled/normalize_nfd_size_unicos_in.o compiled/normalize_nfd_unicos_manually.o compiled/normalize_nfd_unicos_manually_in.o compiled/normalize_nfkc_size_unicos.o compiled/normalize_nfkc_size_unicos_in.o compiled/normalize_nfkc_unicos_manually.o compiled/normalize_nfkc_unicos_manually_in.o compiled/normalize_nfkd_size_unicos.o compiled/normalize_nfkd_size_unicos_in.o compiled/normalize_nfkd_unicos_manually.o compiled/normalize_nfkd_unicos_manually_in.o compiled/title_size_unicos.o compiled/title_size_unicos_in.o compiled/title_unicos_manually.o compiled/title_unicos_manually_in.o compiled/upcase_size_unicos.o compiled/upcase_size_unicos_in.o compiled/upcase_unicos_manually.o compiled/upcase_unicos_manually_in.o compiled/is_downcase_unicos.o compiled/is_downcase_unicos_in.o compiled/is_foldcase_unicos.o compiled/is_foldcase_unicos_in.o compiled/is_normalize_nfc_unicos.o compiled/is_normalize_nfc_unicos_in.o compiled/is_normalize_nfd_unicos.o compiled/is_normalize_nfd_unicos_in.o compiled/is_normalize_nfkc_unicos.o compiled/is_normalize_nfkc_unicos_in.o compiled/is_normalize_nfkd_unicos.o compiled/is_normalize_nfkd_unicos_in.o compiled/is_title_unicos.o compiled/is_title_unicos_in.o compiled/is_upcase_unicos.o compiled/is_upcase_unicos_in.o compiled/equal_unicos_as_primary.o compiled/equal_unicos_as_secondary.o compiled/equal_unicos_as_tertiary.o compiled/equal_unicos_as_quaternary.o compiled/equal_unicos_as_expansion_primary.o compiled/equal_unicos_as_expansion_secondary.o compiled/equal_unicos_as_expansion_tertiary.o compiled/equal_unicos_as_expansion_quaternary.o compiled/equal_unicos.o compiled/equalp_unicos.o compiled/unequal_unicos.o compiled/unequalp_unicos.o
+unicos.lib: compiled/clear_unicos.o compiled/copy_unicos_manually.o compiled/drop_unicos.o compiled/drops_unicos.o compiled/get_insertion_unicoc_from_unicos.o compiled/get_unicoc_from_unicos.o compiled/get_unicos.o compiled/has_margin_unicos.o compiled/init_unicos.o compiled/insert_unicos_manually.o compiled/inserts_unicos_manually.o compiled/length_unicos.o compiled/next_unicos.o compiled/sub_unicos_manually.o compiled/set_unicos.o compiled/size_unicos.o compiled/swap_unicos.o compiled/downcase_size_unicos.o compiled/downcase_size_unicos_in.o compiled/downcase_unicos_manually.o compiled/downcase_unicos_manually_in.o compiled/foldcase_size_unicos.o compiled/foldcase_size_unicos_in.o compiled/foldcase_unicos_manually.o compiled/foldcase_unicos_manually_in.o compiled/normalize_nfc_size_unicos.o compiled/normalize_nfc_size_unicos_in.o compiled/normalize_nfc_unicos_manually.o compiled/normalize_nfc_unicos_manually_in.o compiled/normalize_nfd_size_unicos.o compiled/normalize_nfd_size_unicos_in.o compiled/normalize_nfd_unicos_manually.o compiled/normalize_nfd_unicos_manually_in.o compiled/normalize_nfkc_size_unicos.o compiled/normalize_nfkc_size_unicos_in.o compiled/normalize_nfkc_unicos_manually.o compiled/normalize_nfkc_unicos_manually_in.o compiled/normalize_nfkd_size_unicos.o compiled/normalize_nfkd_size_unicos_in.o compiled/normalize_nfkd_unicos_manually.o compiled/normalize_nfkd_unicos_manually_in.o compiled/titlecase_size_unicos.o compiled/titlecase_size_unicos_in.o compiled/titlecase_unicos_manually.o compiled/titlecase_unicos_manually_in.o compiled/upcase_size_unicos.o compiled/upcase_size_unicos_in.o compiled/upcase_unicos_manually.o compiled/upcase_unicos_manually_in.o compiled/is_downcase_unicos.o compiled/is_downcase_unicos_in.o compiled/is_foldcase_unicos.o compiled/is_foldcase_unicos_in.o compiled/is_normalize_nfc_unicos.o compiled/is_normalize_nfc_unicos_in.o compiled/is_normalize_nfd_unicos.o compiled/is_normalize_nfd_unicos_in.o compiled/is_normalize_nfkc_unicos.o compiled/is_normalize_nfkc_unicos_in.o compiled/is_normalize_nfkd_unicos.o compiled/is_normalize_nfkd_unicos_in.o compiled/is_titlecase_unicos.o compiled/is_titlecase_unicos_in.o compiled/is_upcase_unicos.o compiled/is_upcase_unicos_in.o compiled/equal_unicos_as_primary.o compiled/equal_unicos_as_secondary.o compiled/equal_unicos_as_tertiary.o compiled/equal_unicos_as_quaternary.o compiled/equal_unicos_as_expansion_primary.o compiled/equal_unicos_as_expansion_secondary.o compiled/equal_unicos_as_expansion_tertiary.o compiled/equal_unicos_as_expansion_quaternary.o compiled/equal_unicos.o compiled/equalp_unicos.o compiled/unequal_unicos.o compiled/unequalp_unicos.o
+	ar r unicos.lib compiled/clear_unicos.o compiled/copy_unicos_manually.o compiled/drop_unicos.o compiled/drops_unicos.o compiled/get_insertion_unicoc_from_unicos.o compiled/get_unicoc_from_unicos.o compiled/get_unicos.o compiled/has_margin_unicos.o compiled/init_unicos.o compiled/insert_unicos_manually.o compiled/inserts_unicos_manually.o compiled/length_unicos.o compiled/next_unicos.o compiled/sub_unicos_manually.o compiled/set_unicos.o compiled/size_unicos.o compiled/swap_unicos.o compiled/downcase_size_unicos.o compiled/downcase_size_unicos_in.o compiled/downcase_unicos_manually.o compiled/downcase_unicos_manually_in.o compiled/foldcase_size_unicos.o compiled/foldcase_size_unicos_in.o compiled/foldcase_unicos_manually.o compiled/foldcase_unicos_manually_in.o compiled/normalize_nfc_size_unicos.o compiled/normalize_nfc_size_unicos_in.o compiled/normalize_nfc_unicos_manually.o compiled/normalize_nfc_unicos_manually_in.o compiled/normalize_nfd_size_unicos.o compiled/normalize_nfd_size_unicos_in.o compiled/normalize_nfd_unicos_manually.o compiled/normalize_nfd_unicos_manually_in.o compiled/normalize_nfkc_size_unicos.o compiled/normalize_nfkc_size_unicos_in.o compiled/normalize_nfkc_unicos_manually.o compiled/normalize_nfkc_unicos_manually_in.o compiled/normalize_nfkd_size_unicos.o compiled/normalize_nfkd_size_unicos_in.o compiled/normalize_nfkd_unicos_manually.o compiled/normalize_nfkd_unicos_manually_in.o compiled/titlecase_size_unicos.o compiled/titlecase_size_unicos_in.o compiled/titlecase_unicos_manually.o compiled/titlecase_unicos_manually_in.o compiled/upcase_size_unicos.o compiled/upcase_size_unicos_in.o compiled/upcase_unicos_manually.o compiled/upcase_unicos_manually_in.o compiled/is_downcase_unicos.o compiled/is_downcase_unicos_in.o compiled/is_foldcase_unicos.o compiled/is_foldcase_unicos_in.o compiled/is_normalize_nfc_unicos.o compiled/is_normalize_nfc_unicos_in.o compiled/is_normalize_nfd_unicos.o compiled/is_normalize_nfd_unicos_in.o compiled/is_normalize_nfkc_unicos.o compiled/is_normalize_nfkc_unicos_in.o compiled/is_normalize_nfkd_unicos.o compiled/is_normalize_nfkd_unicos_in.o compiled/is_titlecase_unicos.o compiled/is_titlecase_unicos_in.o compiled/is_upcase_unicos.o compiled/is_upcase_unicos_in.o compiled/equal_unicos_as_primary.o compiled/equal_unicos_as_secondary.o compiled/equal_unicos_as_tertiary.o compiled/equal_unicos_as_quaternary.o compiled/equal_unicos_as_expansion_primary.o compiled/equal_unicos_as_expansion_secondary.o compiled/equal_unicos_as_expansion_tertiary.o compiled/equal_unicos_as_expansion_quaternary.o compiled/equal_unicos.o compiled/equalp_unicos.o compiled/unequal_unicos.o compiled/unequalp_unicos.o
 
 compiled/clear_unicos.o: src/clear_unicos.c
 	$(CC) $(CFLAGS) -c src/clear_unicos.c -o compiled/clear_unicos.o
@@ -212,17 +212,17 @@ compiled/normalize_nfkd_unicos_manually.o: src-convertion/normalize_nfkd_unicos_
 compiled/normalize_nfkd_unicos_manually_in.o: src-convertion/normalize_nfkd_unicos_manually_in.c
 	$(CC) $(CFLAGS) -c src-convertion/normalize_nfkd_unicos_manually_in.c -o compiled/normalize_nfkd_unicos_manually_in.o
 
-compiled/title_size_unicos.o: src-convertion/title_size_unicos.c
-	$(CC) $(CFLAGS) -c src-convertion/title_size_unicos.c -o compiled/title_size_unicos.o
+compiled/titlecase_size_unicos.o: src-convertion/titlecase_size_unicos.c
+	$(CC) $(CFLAGS) -c src-convertion/titlecase_size_unicos.c -o compiled/titlecase_size_unicos.o
 
-compiled/title_size_unicos_in.o: src-convertion/title_size_unicos_in.c
-	$(CC) $(CFLAGS) -c src-convertion/title_size_unicos_in.c -o compiled/title_size_unicos_in.o
+compiled/titlecase_size_unicos_in.o: src-convertion/titlecase_size_unicos_in.c
+	$(CC) $(CFLAGS) -c src-convertion/titlecase_size_unicos_in.c -o compiled/titlecase_size_unicos_in.o
 
-compiled/title_unicos_manually.o: src-convertion/title_unicos_manually.c
-	$(CC) $(CFLAGS) -c src-convertion/title_unicos_manually.c -o compiled/title_unicos_manually.o
+compiled/titlecase_unicos_manually.o: src-convertion/titlecase_unicos_manually.c
+	$(CC) $(CFLAGS) -c src-convertion/titlecase_unicos_manually.c -o compiled/titlecase_unicos_manually.o
 
-compiled/title_unicos_manually_in.o: src-convertion/title_unicos_manually_in.c
-	$(CC) $(CFLAGS) -c src-convertion/title_unicos_manually_in.c -o compiled/title_unicos_manually_in.o
+compiled/titlecase_unicos_manually_in.o: src-convertion/titlecase_unicos_manually_in.c
+	$(CC) $(CFLAGS) -c src-convertion/titlecase_unicos_manually_in.c -o compiled/titlecase_unicos_manually_in.o
 
 compiled/upcase_size_unicos.o: src-convertion/upcase_size_unicos.c
 	$(CC) $(CFLAGS) -c src-convertion/upcase_size_unicos.c -o compiled/upcase_size_unicos.o
@@ -272,11 +272,11 @@ compiled/is_normalize_nfkd_unicos.o: src-convertion/is_normalize_nfkd_unicos.c
 compiled/is_normalize_nfkd_unicos_in.o: src-convertion/is_normalize_nfkd_unicos_in.c
 	$(CC) $(CFLAGS) -c src-convertion/is_normalize_nfkd_unicos_in.c -o compiled/is_normalize_nfkd_unicos_in.o
 
-compiled/is_title_unicos.o: src-convertion/is_title_unicos.c
-	$(CC) $(CFLAGS) -c src-convertion/is_title_unicos.c -o compiled/is_title_unicos.o
+compiled/is_titlecase_unicos.o: src-convertion/is_titlecase_unicos.c
+	$(CC) $(CFLAGS) -c src-convertion/is_titlecase_unicos.c -o compiled/is_titlecase_unicos.o
 
-compiled/is_title_unicos_in.o: src-convertion/is_title_unicos_in.c
-	$(CC) $(CFLAGS) -c src-convertion/is_title_unicos_in.c -o compiled/is_title_unicos_in.o
+compiled/is_titlecase_unicos_in.o: src-convertion/is_titlecase_unicos_in.c
+	$(CC) $(CFLAGS) -c src-convertion/is_titlecase_unicos_in.c -o compiled/is_titlecase_unicos_in.o
 
 compiled/is_upcase_unicos.o: src-convertion/is_upcase_unicos.c
 	$(CC) $(CFLAGS) -c src-convertion/is_upcase_unicos.c -o compiled/is_upcase_unicos.o

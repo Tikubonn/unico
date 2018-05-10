@@ -22,6 +22,7 @@ include_src = include.include()
 make_src.add_command("make -C script")
 
 recipe_src_clean = makefile.recipe("clean")
+recipe_src_clean.add_command("rm -f groups.lib")
 make_src.add_independ_recipe(recipe_src_clean)
 
 recipe_src_lib = makefile.recipe("groups.lib")

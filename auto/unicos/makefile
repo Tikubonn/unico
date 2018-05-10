@@ -13,15 +13,15 @@ clean:
 	rm -f compiled/upcase_unicos.o
 	rm -f compiled/downcase_unicos.o
 	rm -f compiled/foldcase_unicos.o
-	rm -f compiled/title_unicos.o
+	rm -f compiled/titlecase_unicos.o
 	rm -f compiled/normalize_nfc_unicos.o
 	rm -f compiled/normalize_nfd_unicos.o
 	rm -f compiled/normalize_nfkc_unicos.o
 	rm -f compiled/normalize_nfkd_unicos.o
 	rm -f compiled/free_unicos.o
 
-unicos.lib: compiled/make_unicos.o compiled/copy_unicos.o compiled/extend_unicos.o compiled/insert_unicos.o compiled/inserts_unicos.o compiled/sub_unicos.o compiled/upcase_unicos.o compiled/downcase_unicos.o compiled/foldcase_unicos.o compiled/title_unicos.o compiled/normalize_nfc_unicos.o compiled/normalize_nfd_unicos.o compiled/normalize_nfkc_unicos.o compiled/normalize_nfkd_unicos.o compiled/free_unicos.o
-	ar r unicos.lib compiled/make_unicos.o compiled/copy_unicos.o compiled/extend_unicos.o compiled/insert_unicos.o compiled/inserts_unicos.o compiled/sub_unicos.o compiled/upcase_unicos.o compiled/downcase_unicos.o compiled/foldcase_unicos.o compiled/title_unicos.o compiled/normalize_nfc_unicos.o compiled/normalize_nfd_unicos.o compiled/normalize_nfkc_unicos.o compiled/normalize_nfkd_unicos.o compiled/free_unicos.o
+unicos.lib: compiled/make_unicos.o compiled/copy_unicos.o compiled/extend_unicos.o compiled/insert_unicos.o compiled/inserts_unicos.o compiled/sub_unicos.o compiled/upcase_unicos.o compiled/downcase_unicos.o compiled/foldcase_unicos.o compiled/titlecase_unicos.o compiled/normalize_nfc_unicos.o compiled/normalize_nfd_unicos.o compiled/normalize_nfkc_unicos.o compiled/normalize_nfkd_unicos.o compiled/free_unicos.o
+	ar r unicos.lib compiled/make_unicos.o compiled/copy_unicos.o compiled/extend_unicos.o compiled/insert_unicos.o compiled/inserts_unicos.o compiled/sub_unicos.o compiled/upcase_unicos.o compiled/downcase_unicos.o compiled/foldcase_unicos.o compiled/titlecase_unicos.o compiled/normalize_nfc_unicos.o compiled/normalize_nfd_unicos.o compiled/normalize_nfkc_unicos.o compiled/normalize_nfkd_unicos.o compiled/free_unicos.o
 
 compiled/make_unicos.o: src/make_unicos.c
 	$(CC) $(CFLAGS) -c src/make_unicos.c -o compiled/make_unicos.o
@@ -50,8 +50,8 @@ compiled/downcase_unicos.o: src-convertion/downcase_unicos.c
 compiled/foldcase_unicos.o: src-convertion/foldcase_unicos.c
 	$(CC) $(CFLAGS) -c src-convertion/foldcase_unicos.c -o compiled/foldcase_unicos.o
 
-compiled/title_unicos.o: src-convertion/title_unicos.c
-	$(CC) $(CFLAGS) -c src-convertion/title_unicos.c -o compiled/title_unicos.o
+compiled/titlecase_unicos.o: src-convertion/titlecase_unicos.c
+	$(CC) $(CFLAGS) -c src-convertion/titlecase_unicos.c -o compiled/titlecase_unicos.o
 
 compiled/normalize_nfc_unicos.o: src-convertion/normalize_nfc_unicos.c
 	$(CC) $(CFLAGS) -c src-convertion/normalize_nfc_unicos.c -o compiled/normalize_nfc_unicos.o

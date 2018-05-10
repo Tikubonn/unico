@@ -16,6 +16,7 @@ lib = makefile.recipe("groups.lib", [], [lib_command])
 make.add_recipe(lib)
 
 clean = makefile.recipe("clean")
+clean.add_command("rm -f groups.lib")
 make.add_independ_recipe(clean)
 
 for name in data:

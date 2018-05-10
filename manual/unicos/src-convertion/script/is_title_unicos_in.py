@@ -14,8 +14,8 @@ try:
   for data in datas:
     nd.extend(data["title"], True)
 
-  with open("dist/is_title_unicos_in.c", "w") as stream:
-    predicate_function.write("is_title_unicos_in", nd, stream)
+  with open("dist/is_titlecase_unicos_in.c", "w") as stream:
+    predicate_function.write("is_titlecase_unicos_in", nd, stream)
     
 except KeyboardInterrupt:
   

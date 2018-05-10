@@ -1,6 +1,6 @@
 
 export CC = gcc
-export CFLAGS = -I$(CURDIR) -L$(CURDIR) -Wall -g3
+export CFLAGS = -I$(CURDIR) -L$(CURDIR) -fPIC -Wall -g3
 export PYTHON = py
 export ROOTDIR = $(CURDIR)
 

@@ -8,7 +8,7 @@
 #include "src-convertion/upcase_unicos.h"
 #include "src-convertion/downcase_unicos.h"
 #include "src-convertion/foldcase_unicos.h"
-#include "src-convertion/title_unicos.h"
+#include "src-convertion/titlecase_unicos.h"
 #include "src-convertion/normalize_nfc_unicos.h"
 #include "src-convertion/normalize_nfd_unicos.h"
 #include "src-convertion/normalize_nfkc_unicos.h"

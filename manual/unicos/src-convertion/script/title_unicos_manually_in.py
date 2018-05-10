@@ -18,8 +18,8 @@ try:
     ## nd.extend(data["lower"], data["title"])
     ## nd.extend(data["fold"], data["title"])
 
-  with open("dist/title_unicos_manually_in.c", "w") as stream:
-    convert_function.write("title_unicos_manually_in", nd, stream)
+  with open("dist/titlecase_unicos_manually_in.c", "w") as stream:
+    convert_function.write("titlecase_unicos_manually_in", nd, stream)
     
 except KeyboardInterrupt:
   

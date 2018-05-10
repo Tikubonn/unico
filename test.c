@@ -560,13 +560,13 @@ int main (){
     free_unicos(uni);
   }
   
-  /* title */
+  /* titlecase */
 
   {
     unico data[] = { 0x01f2 };
     unicos *uni = make_unicos(10);
     test2(inserts_unicos_manually(data, sizeof(data) / sizeof(unico), 0, uni), 0);
-    test(is_title_unicos(0, -1, uni));
+    test(is_titlecase_unicos(0, -1, uni));
     free_unicos(uni);
   }
     
@@ -574,7 +574,7 @@ int main (){
     unico data[] = { 0x01f1 };
     unicos *uni = make_unicos(10);
     test2(inserts_unicos_manually(data, sizeof(data) / sizeof(unico), 0, uni), 0);
-    test(!is_title_unicos(0, -1, uni));
+    test(!is_titlecase_unicos(0, -1, uni));
     free_unicos(uni);
   }
   
@@ -692,14 +692,14 @@ int main (){
     free_unicos(uni);
   }
   
-  /* title */
+  /* titlecase */
   
   {
     unico data[] = { 0x01f2 };
     unicos *uni = make_unicos(10);
     test2(inserts_unicos_manually(data, sizeof(data) / sizeof(unico), 0, uni), 0);
-    test2(title_unicos_manually(0, -1, uni), 0);
-    test(is_title_unicos(0, -1, uni));
+    test2(titlecase_unicos_manually(0, -1, uni), 0);
+    test(is_titlecase_unicos(0, -1, uni));
     free_unicos(uni);
   }
     
@@ -707,8 +707,8 @@ int main (){
     unico data[] = { 0x01f1 };
     unicos *uni = make_unicos(10);
     test2(inserts_unicos_manually(data, sizeof(data) / sizeof(unico), 0, uni), 0);
-    test2(title_unicos_manually(0, -1, uni), 0);
-    test(is_title_unicos(0, -1, uni));
+    test2(titlecase_unicos_manually(0, -1, uni), 0);
+    test(is_titlecase_unicos(0, -1, uni));
     free_unicos(uni);
   }
   
