@@ -9,10 +9,10 @@ def write (name, node, stream):
   
 def write1 (node, stream):
   
-  for n in range(1, 8):
+  for n in range(0, 8):
     nds = node.ndepthes(n)
     if nds.nodes:
-      stream.write("if (%d == enda - indexa){\n" % (n,))
+      stream.write("if (%d == enda - indexa){\n" % (n + 1,))
       stream.write("switch (get_unicos(indexa, unia)){\n")
       for nd in nds.nodes:
         write2(1, nd, stream)
@@ -36,15 +36,16 @@ def write2 (depth, node, stream):
     
 def write1a (node, stream):
   
-  for n in range(1, 8):
+  for n in range(0, 8):
     nds = node.ndepthes(n)
     if nds.nodes:
-      stream.write("if (%d == enda - indexa){\n" % (n,))
+      stream.write("if (%d == enda - indexa){\n" % (n + 1,))
       stream.write("switch (get_unicos(indexb, unib)){\n")
       for nd in nds.nodes:
         write2a(1, nd, stream)
       stream.write("}\n")
       stream.write("}\n")
+  stream.write("return 0;\n")
     
 def write2a (depth, node, stream):
   

@@ -7,14 +7,15 @@ with open("json/collation.json", "r") as stream:
   data = json.load(stream)
 
 nda = node.RootNode()
-ndb = node.RootNode()
 
 for dat in data:
+  
+  ndb = node.RootNode()
+
+  for codes in dat["t"]:
+    ndb.extend(codes, True)
+
   nda.extend(dat["p"], ndb)
-
-for dat in data:
-  for da in dat["t"]:
-    ndb.extend(da, True)
 
 with open("dist/equal_unicos_as_tertiary.c", "w") as stream:
   compare_function.write("equal_unicos_as_tertiary", nda, stream)
