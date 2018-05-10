@@ -74,3 +74,7 @@
 #include "src-comparison/equal_unicos_as_expansion_secondary.h"
 #include "src-comparison/equal_unicos_as_expansion_tertiary.h"
 #include "src-comparison/equal_unicos_as_expansion_quaternary.h"
+#include "src-comparison/equal_unicos.h"
+#include "src-comparison/equalp_unicos.h"
+#include "src-comparison/unequal_unicos.h"
+#include "src-comparison/unequalp_unicos.h"
