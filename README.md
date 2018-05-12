@@ -1,5 +1,5 @@
 # unico
-unico is a unicode library for C. this support encoding, decoding and some operations. becareful! this may not be speedy and safety!  
+unico is a unicode library for C. this support encoding, decoding and some operations. becareful! this may not be speedy and safety! 
 in this library, unicode string is a pure array of unicode code points.
 it is mutable. so often it may have a margin.
 this library has not character class or structure, so the character is just a reference of range of string in this library.
@@ -236,3 +236,11 @@ in this library, this is used to encoding.
 | `int put_bom_unicob_as_utf16le_manually (unicob *uniout)` | input a BOM to `unicob`. if `unicob` has no margin, this return a `UNICOB_NOT_ENOUGH_MEMORY`. on success this return `0`. |
 | `int put_bom_unicob_as_utf32be_manually (unicob *uniout)` | input a BOM to `unicob`. if `unicob` has no margin, this return a `UNICOB_NOT_ENOUGH_MEMORY`. on success this return `0`. |
 | `int put_bom_unicob_as_utf32le_manually (unicob *uniout)` | input a BOM to `unicob`. if `unicob` has no margin, this return a `UNICOB_NOT_ENOUGH_MEMORY`. on success this return `0`. |
+
+## Automatic Functions
+
+*Comming Soon...*
+
+## Temporary Macros
+
+*Comming Soon...*
