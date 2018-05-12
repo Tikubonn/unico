@@ -58,8 +58,8 @@ this data type is mutable, so you can insert, drop or overwrite if has margin.
 | `void drops_unicos_manually (size_t size, size_t index, unicos*)` | delete many elements from `unicos` instance. |
 | `int sub_unicos_manually (unico *sequence, size_t size, size_t index, size_t sizeout, unicos*)` | substitute a elements that in the range to array contents. if instance has no margin, this return a `UNICOS_NOT_ENOUGH_MEMORY`. on success, this return `0`. |
 | `int next_unicos (size_t index, unicos*, size_t *indexout)` | read code points and assign a next starting position of character to `indexout`. if code points is invalid, this return a non-zero integer. on success, this return `0`. |
-| `int get_unicoc_from_unicos (size_t index, unicos*, unicoc *uniout)` | |
-| `int get_insertion_unicoc_from_unicos (size_t index, unicos*, unicoc *uniout)` | |
+| `int get_unicoc_from_unicos (size_t index, unicos*, unicoc *uniout)` | load a `unicoc` instance by index from `unicos` instance. if index is out of range, this return non zero integer. otherwise this always return `0`. |
+| `int get_insertion_unicoc_from_unicos (size_t index, unicos*, unicoc *uniout)` | load a `unicos` instance that is zero ranged by index from `unicos` instance. if index is out of range, this return non zero integer. otherwise this always return `0`. |
 | `size_t length_unicos (unicos*)` | return an integer that is count of characters (it's not unicode code points). |
 
 #### Converter Functions
