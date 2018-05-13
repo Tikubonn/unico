@@ -1,8 +1,10 @@
 
 all:
-	make -C src
 	make unico.lib 
-	
+
+update:
+	make -C src update
+
 clean:
 	rm -f unico.lib
 	rm -f compiled/is_base_unico.o

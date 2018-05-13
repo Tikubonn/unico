@@ -1,7 +1,9 @@
 
 all:
 	make utf16.lib
-	
+
+update:
+
 clean:
 	rm -f utf16.lib
 	rm -f compiled/put_unicop_utf16.o

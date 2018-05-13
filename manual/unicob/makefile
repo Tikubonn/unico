@@ -1,6 +1,8 @@
 
 all:
-	make unicob.lib 
+	make unicob.lib
+  
+update:
 	
 clean:
 	rm -f unicob.lib 

@@ -1,5 +1,7 @@
 
 all:
+
+update:
 	make dist/equal_unicos_as_secondary.c
 	make dist/equal_unicos_as_tertiary.c
 	make dist/equal_unicos_as_quaternary.c

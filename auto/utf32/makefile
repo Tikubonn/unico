@@ -1,6 +1,8 @@
 
 all:
 	make utf32.lib
+
+update:
 	
 clean:
 	rm -f utf32.lib

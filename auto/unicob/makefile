@@ -2,6 +2,8 @@
 all:
 	make unicob.lib
 
+update:
+
 clean:
 	rm -f unicob.lib
 	rm -f compiled/make_unicob.o

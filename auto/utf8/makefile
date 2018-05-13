@@ -1,6 +1,8 @@
 
 all:
 	make utf8.lib
+
+update:
 	
 clean:
 	rm -f utf8.lib

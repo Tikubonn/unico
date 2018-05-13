@@ -2,6 +2,8 @@
 all:
 	make debug.lib
 
+update:
+
 clean:
 	rm -f debug.lib
 	rm -f compiled/print_unicos_as_utf8.o

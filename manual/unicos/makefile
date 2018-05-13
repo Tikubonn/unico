@@ -1,9 +1,12 @@
 
 all:
-	make -C src-convertion
 	make -C src-groups
-	make -C src-comparison
 	make unicos.lib
+
+update:
+	make -C src-convertion update
+	make -C src-comparison update
+	make -C src-groups update
 
 clean:
 	rm -f unicos.lib

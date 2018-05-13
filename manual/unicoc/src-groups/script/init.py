@@ -11,13 +11,16 @@ with open("json/groups.json", "r") as stream:
 inc = include.include()
 make = makefile.makefile()
 
-lib_command = makefile.command("ar", ("r", "groups.lib"))
-lib = makefile.recipe("groups.lib", [], [lib_command])
-make.add_recipe(lib)
+update = makefile.recipe("update")
+make.add_independ_recipe(update)
 
 clean = makefile.recipe("clean")
 clean.add_command("rm -f groups.lib")
 make.add_independ_recipe(clean)
+
+lib_command = makefile.command("ar", ("r", "groups.lib"))
+lib = makefile.recipe("groups.lib", [], [lib_command])
+make.add_recipe(lib)
 
 for name in data:
   
@@ -35,6 +38,7 @@ for name in data:
     ("cp script/dist/is_%s_unicoc.c is_%s_unicoc.c" % (name, name),))
   
   make.add_independ_recipe(recipe)
+  update.add_command("make is_%s_unicoc.c" % (name,))
     
   recipe = makefile.recipe(
     "is_%s_unicoc.h" % (name,),
@@ -42,6 +46,7 @@ for name in data:
     ("cp script/dist/is_%s_unicoc.h is_%s_unicoc.h" % (name, name),))
   
   make.add_independ_recipe(recipe)
+  update.add_command("make is_%s_unicoc.h" % (name,))
     
   recipe = makefile.recipe(
     "compiled/is_%s_unicoc.o" % (name,),

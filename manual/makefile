@@ -8,6 +8,15 @@ all:
 	make -C utf16
 	make -C utf32
 	
+update:
+	make -C unico update
+	make -C unicos update
+	make -C unicoc update
+	make -C unicob update
+	make -C utf8 update
+	make -C utf16 update
+	make -C utf32 update
+
 clean:
 	make -C unico clean
 	make -C unicos clean

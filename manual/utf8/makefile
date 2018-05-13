@@ -2,6 +2,8 @@
 all:
 	make utf8.lib
 
+update:
+
 clean:
 	rm -f utf8.lib
 	rm -f compiled/init_unicop_utf8.o

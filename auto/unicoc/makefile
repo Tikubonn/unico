@@ -1,6 +1,8 @@
 
 all:
 	make unicoc.lib
+
+update:
 	
 clean:
 	rm -f unicoc.lib

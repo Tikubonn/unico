@@ -1,6 +1,8 @@
 
 all:
-	make -C script
+
+update:
+	make -C script update
 	make downcase_size_unicos_in.c
 	make upcase_size_unicos_in.c
 	make foldcase_size_unicos_in.c

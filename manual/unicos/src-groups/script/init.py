@@ -19,11 +19,16 @@ make_src = makefile.makefile()
 make_script = makefile.makefile()
 include_src = include.include()
 
-make_src.add_command("make -C script")
+recipe_script_update = makefile.recipe("update")
+make_script.add_independ_recipe(recipe_script_update)
 
 recipe_src_clean = makefile.recipe("clean")
 recipe_src_clean.add_command("rm -f groups.lib")
 make_src.add_independ_recipe(recipe_src_clean)
+
+recipe_src_update = makefile.recipe("update")
+recipe_src_update.add_command("make -C script update")
+make_src.add_independ_recipe(recipe_src_update)
 
 recipe_src_lib = makefile.recipe("groups.lib")
 recipe_src_lib_ar = makefile.command("ar", ("r", "groups.lib"))
@@ -48,7 +53,8 @@ for fname in os.listdir("json"):
      "json/%s.json" % (name,)),
     ("$(PYTHON) is_%s_unicos.py" % (name,),))
   
-  make_script.add_recipe(recipe)
+  make_script.add_independ_recipe(recipe)
+  recipe_script_update.add_command("make dist/is_%s_unicos.c" % (name,))
   
   ## src/makefile_update
   
@@ -58,6 +64,7 @@ for fname in os.listdir("json"):
     ("cp script/dist/is_%s_unicos.c is_%s_unicos.c" % (name, name,),))
   
   make_src.add_independ_recipe(recipe)
+  recipe_src_update.add_command("make is_%s_unicos.c" % (name,))
   
   recipe = makefile.recipe(
     "is_%s_unicos.h" % (name,),
@@ -65,6 +72,7 @@ for fname in os.listdir("json"):
     ("cp script/dist/is_%s_unicos.h is_%s_unicos.h" % (name, name,),))
   
   make_src.add_independ_recipe(recipe)
+  recipe_src_update.add_command("make is_%s_unicos.h" % (name,))
   
   ## src/makefile 
   

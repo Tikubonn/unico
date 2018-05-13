@@ -1,5 +1,7 @@
 
 all:
+
+update:
 	make dist/is_spacing_combining_unico.c
 	make dist/is_non_spacing_combining_unico.c
 	make dist/is_enclosing_combining_unico.c

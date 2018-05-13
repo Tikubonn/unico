@@ -5,12 +5,18 @@ export PYTHON = py
 export ROOTDIR = $(CURDIR)
 
 all:
+	make update
 	make -C manual
 	make -C auto
 	make -C debug
 	make dist/unico.lib
 	make dist/unico.dll
 	make test.exe
+	
+update:
+	make -C manual update
+	make -C auto update
+	make -C debug update
 	
 clean:
 	make -C manual clean

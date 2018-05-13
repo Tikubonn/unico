@@ -1,6 +1,8 @@
 
 all:
-	make -C script
+
+update:
+	make -C script update
 	make is_spacing_combining_unico.c
 	make is_non_spacing_combining_unico.c
 	make is_enclosing_combining_unico.c

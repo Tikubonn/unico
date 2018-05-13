@@ -1,5 +1,7 @@
 
 all:
+
+update:
 	make dist/downcase_unicos_manually_in.c
 	make dist/upcase_unicos_manually_in.c
 	make dist/foldcase_unicos_manually_in.c

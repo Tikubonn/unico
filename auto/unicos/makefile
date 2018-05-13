@@ -1,6 +1,8 @@
 
 all:
 	make unicos.lib
+
+update:
 	
 clean:
 	rm -f unicos.lib

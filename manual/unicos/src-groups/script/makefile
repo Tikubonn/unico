@@ -1,5 +1,8 @@
 all:
+
+update: 
 	make dist/is_adlam_unicos.c
+	make dist/is_ahom_unicos.c
 	make dist/is_anatolian_hieroglyphs_unicos.c
 	make dist/is_arabic_unicos.c
 	make dist/is_armenian_unicos.c
@@ -18,17 +21,23 @@ all:
 	make dist/is_carian_unicos.c
 	make dist/is_caucasian_albanian_unicos.c
 	make dist/is_chakma_unicos.c
+	make dist/is_cham_unicos.c
 	make dist/is_cherokee_unicos.c
+	make dist/is_cjk_unicos.c
+	make dist/is_cjk_extensions_unicos.c
 	make dist/is_coptic_unicos.c
 	make dist/is_cuneiform_unicos.c
+	make dist/is_currency_symbol_unicos.c
 	make dist/is_cypriot_unicos.c
 	make dist/is_cyrillic_unicos.c
 	make dist/is_deseret_unicos.c
 	make dist/is_devanagari_unicos.c
+	make dist/is_digits_unicos.c
 	make dist/is_duployan_unicos.c
 	make dist/is_egyptian_hieroglyphs_unicos.c
 	make dist/is_elbasan_unicos.c
 	make dist/is_ethiopic_unicos.c
+	make dist/is_general_symbol_unicos.c
 	make dist/is_georgian_unicos.c
 	make dist/is_glagolitic_unicos.c
 	make dist/is_gothic_unicos.c
@@ -40,6 +49,7 @@ all:
 	make dist/is_hanunoo_unicos.c
 	make dist/is_hatran_unicos.c
 	make dist/is_hebrew_unicos.c
+	make dist/is_ignored_unicos.c
 	make dist/is_imperial_aramaic_unicos.c
 	make dist/is_inscriptional_pahlavi_unicos.c
 	make dist/is_inscriptional_parthian_unicos.c
@@ -58,6 +68,7 @@ all:
 	make dist/is_limbu_unicos.c
 	make dist/is_linear_a_unicos.c
 	make dist/is_linear_b_unicos.c
+	make dist/is_lisu_unicos.c
 	make dist/is_lycian_unicos.c
 	make dist/is_lydian_unicos.c
 	make dist/is_mahajani_unicos.c
@@ -70,11 +81,13 @@ all:
 	make dist/is_mende_kikakui_unicos.c
 	make dist/is_meroitic_hieroglyphs_and_cursive_unicos.c
 	make dist/is_miao_unicos.c
+	make dist/is_modi_unicos.c
 	make dist/is_mongolian_unicos.c
 	make dist/is_mro_unicos.c
 	make dist/is_multani_unicos.c
 	make dist/is_myanmar_unicos.c
 	make dist/is_nabataean_unicos.c
+	make dist/is_newa_unicos.c
 	make dist/is_new_tai_lue_unicos.c
 	make dist/is_nko_unicos.c
 	make dist/is_nushu_unicos.c
@@ -96,10 +109,12 @@ all:
 	make dist/is_phags_pa_unicos.c
 	make dist/is_phoenician_unicos.c
 	make dist/is_psalter_pahlavi_unicos.c
+	make dist/is_punctuation_unicos.c
 	make dist/is_rejang_unicos.c
 	make dist/is_runic_unicos.c
 	make dist/is_samaritan_unicos.c
 	make dist/is_saurashtra_unicos.c
+	make dist/is_secondary_unicos.c
 	make dist/is_sharada_unicos.c
 	make dist/is_shavian_unicos.c
 	make dist/is_siddham_unicos.c
@@ -119,17 +134,23 @@ all:
 	make dist/is_tangut_unicos.c
 	make dist/is_telugu_unicos.c
 	make dist/is_thaana_unicos.c
+	make dist/is_thai_unicos.c
 	make dist/is_tibetan_unicos.c
 	make dist/is_tifinagh_unicos.c
 	make dist/is_tirhuta_unicos.c
 	make dist/is_ugaritic_unicos.c
+	make dist/is_unsupported_unicos.c
 	make dist/is_vai_unicos.c
 	make dist/is_warang_citi_unicos.c
+	make dist/is_whitespace_unicos.c
 	make dist/is_yi_unicos.c
 	make dist/is_zanabazar_square_unicos.c
 
 dist/is_adlam_unicos.c: is_adlam_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/adlam.json
 	$(PYTHON) is_adlam_unicos.py
+
+dist/is_ahom_unicos.c: is_ahom_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/ahom.json
+	$(PYTHON) is_ahom_unicos.py
 
 dist/is_anatolian_hieroglyphs_unicos.c: is_anatolian_hieroglyphs_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/anatolian_hieroglyphs.json
 	$(PYTHON) is_anatolian_hieroglyphs_unicos.py
@@ -185,14 +206,26 @@ dist/is_caucasian_albanian_unicos.c: is_caucasian_albanian_unicos.py lib/node.py
 dist/is_chakma_unicos.c: is_chakma_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/chakma.json
 	$(PYTHON) is_chakma_unicos.py
 
+dist/is_cham_unicos.c: is_cham_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/cham.json
+	$(PYTHON) is_cham_unicos.py
+
 dist/is_cherokee_unicos.c: is_cherokee_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/cherokee.json
 	$(PYTHON) is_cherokee_unicos.py
+
+dist/is_cjk_unicos.c: is_cjk_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/cjk.json
+	$(PYTHON) is_cjk_unicos.py
+
+dist/is_cjk_extensions_unicos.c: is_cjk_extensions_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/cjk_extensions.json
+	$(PYTHON) is_cjk_extensions_unicos.py
 
 dist/is_coptic_unicos.c: is_coptic_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/coptic.json
 	$(PYTHON) is_coptic_unicos.py
 
 dist/is_cuneiform_unicos.c: is_cuneiform_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/cuneiform.json
 	$(PYTHON) is_cuneiform_unicos.py
+
+dist/is_currency_symbol_unicos.c: is_currency_symbol_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/currency_symbol.json
+	$(PYTHON) is_currency_symbol_unicos.py
 
 dist/is_cypriot_unicos.c: is_cypriot_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/cypriot.json
 	$(PYTHON) is_cypriot_unicos.py
@@ -206,6 +239,9 @@ dist/is_deseret_unicos.c: is_deseret_unicos.py lib/node.py lib/generator/predica
 dist/is_devanagari_unicos.c: is_devanagari_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/devanagari.json
 	$(PYTHON) is_devanagari_unicos.py
 
+dist/is_digits_unicos.c: is_digits_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/digits.json
+	$(PYTHON) is_digits_unicos.py
+
 dist/is_duployan_unicos.c: is_duployan_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/duployan.json
 	$(PYTHON) is_duployan_unicos.py
 
@@ -217,6 +253,9 @@ dist/is_elbasan_unicos.c: is_elbasan_unicos.py lib/node.py lib/generator/predica
 
 dist/is_ethiopic_unicos.c: is_ethiopic_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/ethiopic.json
 	$(PYTHON) is_ethiopic_unicos.py
+
+dist/is_general_symbol_unicos.c: is_general_symbol_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/general_symbol.json
+	$(PYTHON) is_general_symbol_unicos.py
 
 dist/is_georgian_unicos.c: is_georgian_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/georgian.json
 	$(PYTHON) is_georgian_unicos.py
@@ -250,6 +289,9 @@ dist/is_hatran_unicos.c: is_hatran_unicos.py lib/node.py lib/generator/predicate
 
 dist/is_hebrew_unicos.c: is_hebrew_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/hebrew.json
 	$(PYTHON) is_hebrew_unicos.py
+
+dist/is_ignored_unicos.c: is_ignored_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/ignored.json
+	$(PYTHON) is_ignored_unicos.py
 
 dist/is_imperial_aramaic_unicos.c: is_imperial_aramaic_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/imperial_aramaic.json
 	$(PYTHON) is_imperial_aramaic_unicos.py
@@ -305,6 +347,9 @@ dist/is_linear_a_unicos.c: is_linear_a_unicos.py lib/node.py lib/generator/predi
 dist/is_linear_b_unicos.c: is_linear_b_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/linear_b.json
 	$(PYTHON) is_linear_b_unicos.py
 
+dist/is_lisu_unicos.c: is_lisu_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/lisu.json
+	$(PYTHON) is_lisu_unicos.py
+
 dist/is_lycian_unicos.c: is_lycian_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/lycian.json
 	$(PYTHON) is_lycian_unicos.py
 
@@ -341,6 +386,9 @@ dist/is_meroitic_hieroglyphs_and_cursive_unicos.c: is_meroitic_hieroglyphs_and_c
 dist/is_miao_unicos.c: is_miao_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/miao.json
 	$(PYTHON) is_miao_unicos.py
 
+dist/is_modi_unicos.c: is_modi_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/modi.json
+	$(PYTHON) is_modi_unicos.py
+
 dist/is_mongolian_unicos.c: is_mongolian_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/mongolian.json
 	$(PYTHON) is_mongolian_unicos.py
 
@@ -355,6 +403,9 @@ dist/is_myanmar_unicos.c: is_myanmar_unicos.py lib/node.py lib/generator/predica
 
 dist/is_nabataean_unicos.c: is_nabataean_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/nabataean.json
 	$(PYTHON) is_nabataean_unicos.py
+
+dist/is_newa_unicos.c: is_newa_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/newa.json
+	$(PYTHON) is_newa_unicos.py
 
 dist/is_new_tai_lue_unicos.c: is_new_tai_lue_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/new_tai_lue.json
 	$(PYTHON) is_new_tai_lue_unicos.py
@@ -419,6 +470,9 @@ dist/is_phoenician_unicos.c: is_phoenician_unicos.py lib/node.py lib/generator/p
 dist/is_psalter_pahlavi_unicos.c: is_psalter_pahlavi_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/psalter_pahlavi.json
 	$(PYTHON) is_psalter_pahlavi_unicos.py
 
+dist/is_punctuation_unicos.c: is_punctuation_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/punctuation.json
+	$(PYTHON) is_punctuation_unicos.py
+
 dist/is_rejang_unicos.c: is_rejang_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/rejang.json
 	$(PYTHON) is_rejang_unicos.py
 
@@ -430,6 +484,9 @@ dist/is_samaritan_unicos.c: is_samaritan_unicos.py lib/node.py lib/generator/pre
 
 dist/is_saurashtra_unicos.c: is_saurashtra_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/saurashtra.json
 	$(PYTHON) is_saurashtra_unicos.py
+
+dist/is_secondary_unicos.c: is_secondary_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/secondary.json
+	$(PYTHON) is_secondary_unicos.py
 
 dist/is_sharada_unicos.c: is_sharada_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/sharada.json
 	$(PYTHON) is_sharada_unicos.py
@@ -488,6 +545,9 @@ dist/is_telugu_unicos.c: is_telugu_unicos.py lib/node.py lib/generator/predicate
 dist/is_thaana_unicos.c: is_thaana_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/thaana.json
 	$(PYTHON) is_thaana_unicos.py
 
+dist/is_thai_unicos.c: is_thai_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/thai.json
+	$(PYTHON) is_thai_unicos.py
+
 dist/is_tibetan_unicos.c: is_tibetan_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/tibetan.json
 	$(PYTHON) is_tibetan_unicos.py
 
@@ -500,11 +560,17 @@ dist/is_tirhuta_unicos.c: is_tirhuta_unicos.py lib/node.py lib/generator/predica
 dist/is_ugaritic_unicos.c: is_ugaritic_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/ugaritic.json
 	$(PYTHON) is_ugaritic_unicos.py
 
+dist/is_unsupported_unicos.c: is_unsupported_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/unsupported.json
+	$(PYTHON) is_unsupported_unicos.py
+
 dist/is_vai_unicos.c: is_vai_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/vai.json
 	$(PYTHON) is_vai_unicos.py
 
 dist/is_warang_citi_unicos.c: is_warang_citi_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/warang_citi.json
 	$(PYTHON) is_warang_citi_unicos.py
+
+dist/is_whitespace_unicos.c: is_whitespace_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/whitespace.json
+	$(PYTHON) is_whitespace_unicos.py
 
 dist/is_yi_unicos.c: is_yi_unicos.py lib/node.py lib/generator/predicate_function.py lib/generator/predicate_function_declaration.py json/yi.json
 	$(PYTHON) is_yi_unicos.py

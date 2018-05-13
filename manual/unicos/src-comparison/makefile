@@ -1,6 +1,8 @@
 
 all:
-	make -C script
+
+update:
+	make -C script update
 	make equal_unicos_as_secondary.c
 	make equal_unicos_as_tertiary.c
 	make equal_unicos_as_quaternary.c
