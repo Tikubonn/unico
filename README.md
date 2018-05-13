@@ -5,10 +5,10 @@ it is mutable. so often it may have a margin.
 this library has not character class or structure, so the character is just a reference of range of string in this library.
 
 ```c
-unicos *hello1 = make_unico_from_utf8_string("Hello");
-unicos *hello2 = make_unico_from_utf8_string("مرحبا هناك");
-unicos *hello3 = make_unico_from_utf8_string("привет там");
-unicos *separator = make_unico_from_utf8_string(", ");
+unicos *hello1 = make_unico_from_utf8_string(u8"Hello");
+unicos *hello2 = make_unico_from_utf8_string(u8"مرحبا هناك");
+unicos *hello3 = make_unico_from_utf8_string(u8"привет там");
+unicos *separator = make_unico_from_utf8_string(u8", ");
 unicos *hellos[] = { hello1, hello2, hello3 };
 unicos *hi = join_unicos(hellos, 3, separator); // Hello, مرحبا هناك, привет там
 ```
