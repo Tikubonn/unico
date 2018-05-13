@@ -3,7 +3,7 @@ all:
 	make dist/downcase_unicos_manually_in.c
 	make dist/upcase_unicos_manually_in.c
 	make dist/foldcase_unicos_manually_in.c
-	make dist/title_unicos_manually_in.c
+	make dist/titlecase_unicos_manually_in.c
 	make dist/normalize_nfc_unicos_manually_in.c
 	make dist/normalize_nfd_unicos_manually_in.c
 	make dist/normalize_nfkc_unicos_manually_in.c
@@ -11,7 +11,7 @@ all:
 	make dist/downcase_size_unicos_in.c
 	make dist/upcase_size_unicos_in.c
 	make dist/foldcase_size_unicos_in.c
-	make dist/title_size_unicos_in.c
+	make dist/titlecase_size_unicos_in.c
 	make dist/normalize_nfc_size_unicos_in.c
 	make dist/normalize_nfd_size_unicos_in.c
 	make dist/normalize_nfkc_size_unicos_in.c
@@ -19,7 +19,7 @@ all:
 	make dist/is_downcase_unicos_in.c
 	make dist/is_upcase_unicos_in.c
 	make dist/is_foldcase_unicos_in.c
-	make dist/is_title_unicos_in.c
+	make dist/is_titlecase_unicos_in.c
 	make dist/is_normalize_nfc_unicos_in.c
 	make dist/is_normalize_nfd_unicos_in.c
 	make dist/is_normalize_nfkc_unicos_in.c
@@ -38,8 +38,8 @@ dist/upcase_size_unicos_in.c: upcase_size_unicos_in.py $(json) $(lib)
 dist/foldcase_size_unicos_in.c: foldcase_size_unicos_in.py $(json) $(lib)
 	$(PYTHON) foldcase_size_unicos_in.py
 
-dist/title_size_unicos_in.c: title_size_unicos_in.py $(json) $(lib)
-	$(PYTHON) title_size_unicos_in.py
+dist/titlecase_size_unicos_in.c: titlecase_size_unicos_in.py $(json) $(lib)
+	$(PYTHON) titlecase_size_unicos_in.py
 
 dist/normalize_nfc_size_unicos_in.c: normalize_nfc_size_unicos_in.py $(json) $(lib)
 	$(PYTHON) normalize_nfc_size_unicos_in.py
@@ -62,8 +62,8 @@ dist/upcase_unicos_manually_in.c: upcase_unicos_manually_in.py $(json) $(lib)
 dist/foldcase_unicos_manually_in.c: foldcase_unicos_manually_in.py $(json) $(lib)
 	$(PYTHON) foldcase_unicos_manually_in.py
 
-dist/title_unicos_manually_in.c: title_unicos_manually_in.py $(json) $(lib)
-	$(PYTHON) title_unicos_manually_in.py
+dist/titlecase_unicos_manually_in.c: titlecase_unicos_manually_in.py $(json) $(lib)
+	$(PYTHON) titlecase_unicos_manually_in.py
 
 dist/normalize_nfc_unicos_manually_in.c: normalize_nfc_unicos_manually_in.py $(json) $(lib)
 	$(PYTHON) normalize_nfc_unicos_manually_in.py
@@ -86,8 +86,8 @@ dist/is_upcase_unicos_in.c: is_upcase_unicos_in.py $(json) $(lib)
 dist/is_foldcase_unicos_in.c: is_foldcase_unicos_in.py $(json) $(lib)
 	$(PYTHON) is_foldcase_unicos_in.py
 
-dist/is_title_unicos_in.c: is_title_unicos_in.py $(json) $(lib)
-	$(PYTHON) is_title_unicos_in.py
+dist/is_titlecase_unicos_in.c: is_titlecase_unicos_in.py $(json) $(lib)
+	$(PYTHON) is_titlecase_unicos_in.py
 
 dist/is_normalize_nfc_unicos_in.c: is_normalize_nfc_unicos_in.py $(json) $(lib)
 	$(PYTHON) is_normalize_nfc_unicos_in.py
