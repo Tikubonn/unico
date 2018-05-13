@@ -3,6 +3,7 @@
 *.lib
 *.exe
 *.pyc
+*.log
 make.exe.stackdump
 __pycache__
 __pycache__/*
