@@ -47,3 +47,7 @@
 #include "src-convertion/is_normalize_nfkd_unicoc.h"
 #include "src-convertion/is_downcase_unicoc.h"
 #include "src-convertion/is_titlecase_unicoc.h"
+#include "src-comparison/equal_unicoc.h"
+#include "src-comparison/equalp_unicoc.h"
+#include "src-comparison/unequal_unicoc.h"
+#include "src-comparison/unequalp_unicoc.h"
