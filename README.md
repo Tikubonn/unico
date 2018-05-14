@@ -3,6 +3,7 @@ unico is a incomplete unicode library for C. this support encoding, decoding and
 in this library, unicode string is a pure array of unicode code points.
 it is mutable. so often it may have a margin.
 this library has not character class or structure, so the character is just a reference of range of string in this library.
+this library contain too many functions, so I cannot write completely it to readme and wiki. so please read the source code in this library often if you want to know detail :D
 
 ```c
 unicos *hello1 = make_unico_from_utf8_string(u8"Hello");
