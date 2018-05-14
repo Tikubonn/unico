@@ -93,7 +93,7 @@ normalize_nfkd_unicos_manually(0, -1, example); // 00dc => 0055 0308
 | `size_normalize_nfkc_unicos_manually (size_t index, size_t end, unicos *uniout)` | return a converted size as `size_t`. |
 | `size_normalize_nfkd_unicos_manually (size_t index, size_t end, unicos *uniout)` | return a converted size as `size_t`. |
 | `upcase_unicos_manually (size_t index, size_t end, unicos *uniout)` | convert `unicos` instance to up case. if `uniout` has no margin, this return a `UNICOS_NOT_ENOUGH_MEMORY`. on success this return `0`. |
-| `downcase_unicos_manually (size_t index, size_t end, unicos *uniout)` | convert `unicos` instance to down case. if `uniout` has no margin, this return a `UNICOS_NOT_ENOUGH_MEMORY`. on success this return `0`. |
+| `downcase_unicos_manually (size_t index, size_t end, unicos *uniout)` | convert `unicos` instance to lower case. if `uniout` has no margin, this return a `UNICOS_NOT_ENOUGH_MEMORY`. on success this return `0`. |
 | `foldcase_unicos_manually (size_t index, size_t end, unicos *uniout)` | convert `unicos` instance to fold case. if `uniout` has no margin, this return a `UNICOS_NOT_ENOUGH_MEMORY`. on success this return `0`. |
 | `titlecase_unicos_manually (size_t index, size_t end, unicos *uniout)` | convert `unicos` instance to title case. if `uniout` has no margin, this return a `UNICOS_NOT_ENOUGH_MEMORY`. on success this return `0`. |
 | `normalize_nfc_unicos_manually (size_t index, size_t end, unicos *uniout)` | normalize `unicos` instance with **NFC**. if `uniout` has no margin, this return a `UNICOS_NOT_ENOUGH_MEMORY`. on success this return `0`. |
@@ -324,40 +324,40 @@ if you want to make a temporary instance, you can use [Temporary Macros](#tempor
 #### Converter Functions 
 | Function | Description |
 ---- | ----
-| `int upcase_unicoc (unicoc*)` | |
-| `int downcase_unicoc (unicoc*)` | |
-| `int foldcase_unicoc (unicoc*)` | |
-| `int titlecase_unicoc (unicoc*)` | |
-| `int normalize_nfc_unicoc (unicoc*)` | |
-| `int normalize_nfd_unicoc (unicoc*)` | |
-| `int normalize_nfkc_unicoc (unicoc*)` | |
-| `int normalize_nfkd_unicoc (unicoc*)` | |
-| `unicos *upcased_unicoc (unicoc*)` | |
-| `unicos *downcased_unicoc (unicoc*)` | |
-| `unicos *foldcased_unicoc (unicoc*)` | |
-| `unicos *titlecased_unicoc (unicoc*)` | |
-| `unicos *normalized_nfc_unicoc (unicoc*)` | |
-| `unicos *normalized_nfd_unicoc (unicoc*)` | |
-| `unicos *normalized_nfkc_unicoc (unicoc*)` | |
-| `unicos *normalized_nfkd_unicoc (unicoc*)` | |
+| `int upcase_unicoc (unicoc*)` | convert instance to upper case. if instance has no margin, this try extend memory. if memory allocation was success, this always return `0`. if some error was caused, this return non zero integer. |
+| `int downcase_unicoc (unicoc*)` | convert instance to lower case. if instance has no margin, this try extend memory. if memory allocation was success, this always return `0`. if some error was caused, this return non zero integer. |
+| `int foldcase_unicoc (unicoc*)` | convert instance to fold case. if instance has no margin, this try extend memory. if memory allocation was success, this always return `0`. if some error was caused, this return non zero integer. |
+| `int titlecase_unicoc (unicoc*)` | convert instance to title case. if instance has no margin, this try extend memory. if memory allocation was success, this always return `0`. if some error was caused, this return non zero integer. |
+| `int normalize_nfc_unicoc (unicoc*)` | normalize an instance with **NFC**. if instance has no margin, this try extend memory. if memory allocation was success, this always return `0`. if some error was caused, this return non zero integer. |
+| `int normalize_nfd_unicoc (unicoc*)` | normalize an instance with **NFD**. if instance has no margin, this try extend memory. if memory allocation was success, this always return `0`. if some error was caused, this return non zero integer. |
+| `int normalize_nfkc_unicoc (unicoc*)` | normalize an instance with **NFKC**. if instance has no margin, this try extend memory. if memory allocation was success, this always return `0`. if some error was caused, this return non zero integer. |
+| `int normalize_nfkd_unicoc (unicoc*)` | normalize an instance with **NFKD**. if instance has no margin, this try extend memory. if memory allocation was success, this always return `0`. if some error was caused, this return non zero integer. |
+| `unicos *upcased_unicoc (unicoc*)` | return a upper cased string. if caused error, this function return `NULL`. |
+| `unicos *downcased_unicoc (unicoc*)` | return a lower cased string. if caused error, this function return `NULL`. |
+| `unicos *foldcased_unicoc (unicoc*)` | return a fold cased string. if caused error, this function return `NULL`. |
+| `unicos *titlecased_unicoc (unicoc*)` | return a title cased string. if caused error, this function return `NULL`. |
+| `unicos *normalized_nfc_unicoc (unicoc*)` | return a normalized string with **NFC**. if caused error, this function return `NULL`. |
+| `unicos *normalized_nfd_unicoc (unicoc*)` | return a normalized string with **NFD**. if caused error, this function return `NULL`. |
+| `unicos *normalized_nfkc_unicoc (unicoc*)` | return a normalized string with **NFKC**. if caused error, this function return `NULL`. |
+| `unicos *normalized_nfkd_unicoc (unicoc*)` | return a normalized string with **NFKD**. if caused error, this function return `NULL`. |
 
 ### unicop_utf8
 
 | Function | Description | 
 ---- | ---- 
-| `put_unicop_utf8` | |
+| `int put_unicop_utf8 (unsigned char, unicop_utf8*)` | input an `unsigned char` to decoder. if decoder has no margin, this try a extend memory space with `realloc`. if extension was success, this always return `0`. if caused error in this function, this function return non-zero integer. |
 
 ### unicop_utf16
 
 | Function | Description | 
 ---- | ---- 
-| `put_unicop_utf16` | |
+| `int put_unicop_utf16 (unsigned char, unicop_utf8*)` | input an `unsigned char` to decoder. if decoder has no margin, this try a extend memory space with `realloc`. if extension was success, this always return `0`. if caused error in this function, this function return non-zero integer. |
 
 ### unicop_utf32
 
 | Function | Description | 
 ---- | ---- 
-| `put_unicop_utf32` | |
+| `int put_unicop_utf32 (unsigned char, unicop_utf8*)` | input an `unsigned char` to decoder. if decoder has no margin, this try a extend memory space with `realloc`. if extension was success, this always return `0`. if caused error in this function, this function return non-zero integer. |
 
 ### unicob
 
