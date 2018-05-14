@@ -1,3 +1,11 @@
 #pragma once
 #include "src/make_tmp_unicos.h"
 #include "src/copy_tmp_unicos.h"
+#include "src-convertion/upcased_tmp_unicos.h"
+#include "src-convertion/downcased_tmp_unicos.h"
+#include "src-convertion/foldcased_tmp_unicos.h"
+#include "src-convertion/titlecased_tmp_unicos.h"
+#include "src-convertion/normalized_nfc_tmp_unicos.h"
+#include "src-convertion/normalized_nfd_tmp_unicos.h"
+#include "src-convertion/normalized_nfkc_tmp_unicos.h"
+#include "src-convertion/normalized_nfkd_tmp_unicos.h"
