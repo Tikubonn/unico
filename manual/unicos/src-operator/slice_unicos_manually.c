@@ -2,6 +2,21 @@
 #include <stddef.h>
 #define min(a,b) ((a)<(b)?(a):(b))
 
+extern size_t slice_size_unicos (size_t index, size_t end, unicos *uni){
+	size_t size = size_unicos(uni);
+	size_t ind = min(index, size);
+	size_t ed = min(end, size);
+	size_t i;
+	size_t count = 0;
+	for (i = ind; i < ed; i++){
+		unicoc temp;
+		int status = get_unicoc_from_unicos(i, uni, &temp);
+		if (status) return count;
+		count += size_unicoc(&temp);
+	}
+	return count;
+}
+
 static int slice_unicos_manually_in (unicoc *uni, unicos *uniout){
 	size_t size = size_unicoc(uni);
 	size_t index;

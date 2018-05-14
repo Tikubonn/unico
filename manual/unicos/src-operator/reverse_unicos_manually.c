@@ -1,5 +1,10 @@
 #include <unico.h>
 
+size_t reverse_size_unicos (unicos *uni){
+	size_t size = size_unicos(uni);
+	return size;
+}
+
 static int reverse_unicos_manually_in (unicoc *uni, unicos *uniout){
   size_t size = size_unicoc(uni);
   size_t index;

@@ -18,7 +18,7 @@ static size_t slice_unicos_size (size_t index, size_t end, unicos *uni){
 }
 
 unicos *slice_unicos (size_t index, size_t end, unicos *uni){
-	size_t size = slice_unios_size(index, end, uni);
+	size_t size = slice_size_unios(index, end, uni);
 	unicos *uniout = make_unicos(size);
 	if (uniout == NULL) return NULL;
 	slice_unicos_manually(index, size, uni, uniout);

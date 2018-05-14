@@ -1,7 +1,7 @@
 #include <unico.h>
 #include <stddef.h>
 
-size_t size_join_unicos (unicos **unis, size_t size, unicos *separator){
+size_t join_size_unicos (unicos **unis, size_t size, unicos *separator){
 	size_t count = 0;
 	size_t index;
 	for (index = 0; index < size; index++){
@@ -23,7 +23,7 @@ static int join_unicos_manually_in (unicos *uni, unicos *uniout){
 }
 
 int join_unicos_manually (unicos **unis, size_t size, unicos *separator, unicos *uniout){
-	size_t sizea = size_join_unicos(unis, size, separator);
+	size_t sizea = join_size_unicos(unis, size, separator);
 	size_t sizeb = size_unicos(uniout);
 	if (sizea <= sizeb){
 		size_t index;

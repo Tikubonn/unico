@@ -1,5 +1,12 @@
 #include <unico.h>
 
+size_t replace_size_unicos (unicos *unia, unicos *unib, unicos *unic){
+	size_t sizea = size_unicos(unia);
+	size_t sizeb = size_unicos(unib);
+	size_t sizec = size_unicos(unic);
+	return sizec + (sizeb < sizea ? sizeb - sizea : 0);
+}
+
 int replace_unicos_manually (unicos *unia, unicos *unib, unicos *unic, unicos *uniout){
 	size_t index;
 	int status = position_unicos(unia, unic, &index);
