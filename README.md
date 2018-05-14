@@ -386,3 +386,7 @@ in this library, this is used to encoding.
 ## Temporary Macros
 
 *Comming Soon...*
+
+# License
+
+this library released under the MIT License.
