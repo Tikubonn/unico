@@ -9,3 +9,8 @@
 #include "src-convertion/normalized_nfd_tmp_unicos.h"
 #include "src-convertion/normalized_nfkc_tmp_unicos.h"
 #include "src-convertion/normalized_nfkd_tmp_unicos.h"
+#include "src-operator/concat_tmp_unicos.h"
+#include "src-operator/join_tmp_unicos.h"
+#include "src-operator/replace_tmp_unicos.h"
+#include "src-operator/reverse_tmp_unicos.h"
+#include "src-operator/slice_tmp_unicos.h"
