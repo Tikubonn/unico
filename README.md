@@ -173,6 +173,7 @@ get_unicoc_from_unicos(3, hello, &character2); // 0 is success.
 ```
 
 #### Basic Functions
+
 | Function | Description | 
 ---- | ---- 
 | `void init_unicoc (unicos *uni, size_t start, size_t end, unicoc *uniout)` | construct `unicoc` instance by arguments. |
@@ -186,6 +187,7 @@ get_unicoc_from_unicos(3, hello, &character2); // 0 is success.
 | `int sub_unicoc (unico *sequence, size_t size, size_t index, size_t sizeout, unicoc *uniout)` | substitute a elements that in the range to array contents. if instance has no margin, this return a `UNICOS_NOT_ENOUGH_MEMORY`. on success, this return `0`. |
 
 #### Convert Functions
+
 | Function | Description | 
 ---- | ----
 | `int is_upcase_unicoc (unicoc *uni)` | if instance is a uppercase character, this return `1`. otherwise `0`. |
@@ -214,6 +216,7 @@ get_unicoc_from_unicos(3, hello, &character2); // 0 is success.
 | `int normalized_nfkd_unicoc_manually (unicoc*)` | normalize character with **NFKD**. if instance has no margin, this return `UNICOS_NOT_ENOUGH_MEMORY`. on success, this return `0`. |
 
 #### Comparison Functions
+
 | Function | Description |
 ---- | ----
 | `int equal_unicoc_as_primary (unicoc*, unicoc*)` | compare two unicode characters as binary. if two characters are equal, this return `1`. otherwise this return `0`. |
@@ -311,7 +314,6 @@ if you want to make a temporary instance, you can use [Temporary Macros](#tempor
 
 ### unicoc
 #### Basic Functions 
-
 | Function | Description |
 ---- | ---- 
 | `int extend_unicoc (size_t size, unicoc*)` | |
@@ -320,7 +322,6 @@ if you want to make a temporary instance, you can use [Temporary Macros](#tempor
 | `int sub_unicoc (unico *sequence, size_t size, size_t index, size_t sizeout, unicoc*)` | |
 
 #### Converter Functions 
-
 | Function | Description |
 ---- | ----
 | `int upcase_unicoc (unicoc*)` | |
@@ -381,7 +382,55 @@ if you want to make a temporary instance, you can use [Temporary Macros](#tempor
 
 ## Temporary Macros
 
-*Comming Soon...*
+those macros allocate memory from stack frame.
+so created instance will be released automatically when exit from current scope. it is useful for management of temporary instance. but those function has possibility that cause segmentation error when not enough memory.
+
+### unicos 
+
+#### Basic Functions 
+
+| Macro | Description |
+---- | ---- 
+| `make_tmp_unicos (var, size)` | | 
+| `copy_tmp_unicos (var, unicos)` | | 
+
+#### Converter Functions
+
+| Macro | Description |
+---- | ----
+| `upcased_tmp_unicos (var, uniocos)` | | 
+| `downcased_tmp_unicos (var, uniocos)` | | 
+| `foldcased_tmp_unicos (var, uniocos)` | | 
+| `titlecased_tmp_unicos (var, uniocos)` | | 
+| `normalized_nfc_tmp_unicos (var, uniocos)` | | 
+| `normalized_nfd_tmp_unicos (var, uniocos)` | | 
+| `normalized_nfkc_tmp_unicos (var, uniocos)` | | 
+| `normalized_nfkd_tmp_unicos (var, uniocos)` | | 
+
+### unicob
+
+| Macro | Description | 
+---- | ---- 
+| `make_tmp_unicob (var, size)` | |
+| `copy_tmp_unicob (var, unicob)` | |
+
+### unicop_utf8
+
+| Macro | Description | 
+---- | ---- 
+| `make_tmp_unicop_utf8 (var, unicos)` | |
+
+### unicop_utf16
+
+| Macro | Description | 
+---- | ---- 
+| `make_tmp_unicop_utf16 (var, endian, unicos)` | |
+
+### unicop_utf32
+
+| Macro | Description | 
+---- | ---- 
+| `make_tmp_unicop_utf32 (var, endian, unicos)` | |
 
 # License
 
