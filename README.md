@@ -15,7 +15,6 @@ unicos *hi = join_unicos(hellos, 3, separator); // Hello, مرحبا هناك, �
 ```
 
 # API
-
 ## Manual Functions
 those functions does not allocate memory automatically.
 so you should prepare working memory yourself. if you want to management unico by GC, those functions are useful. but normally [Automatic Functions](#automatic-functions) are easier to use than those.
@@ -38,12 +37,10 @@ unico smile = 0x00dc; // Ü
 | `is_enclosing_combining_unico(unico)` | return a integer that is `1` if code is enclosing combining character, otherwise `0`. |
 
 ### unicos 
-
 `unicos` is a data type like as string. it has many `unico` inside.  
 this data type is mutable, so you can insert, drop or overwrite if has margin.
 
 #### Basic Functions
-
 | Function | Description |
 ---- | ---- 
 | `void init_unicos (unico *sequence, size_t size, unicos*)` | construct a `unicos` instance by arguments. |
@@ -68,7 +65,6 @@ this data type is mutable, so you can insert, drop or overwrite if has margin.
 | `size_t length_unicos (unicos*)` | return an integer that is count of characters (it's not unicode code points). |
 
 #### Converter Functions
-
 those functions are able to transform characters with [Unicode Normalization Table](https://unicode.org/charts/normalization/) and [Unicode Case Table](https://unicode.org/charts/case/).
 for example, convert unicode string to uppercase etc...
 those functions promise the exception safety that dont modify elements if caused error. maybe :D
@@ -106,7 +102,6 @@ normalize_nfkd_unicos_manually(0, -1, example); // 00dc => 0055 0308
 | `normalize_nfkd_unicos_manually (size_t index, size_t end, unicos *uniout)` | normalize an `unicos` instance with **NFKD**. if `uniout` has no margin, this return a `UNICOS_NOT_ENOUGH_MEMORY`. on success this return `0`. |
 
 #### Comparison Functions 
-
 those functions can compare the two unicode character (not string) with [Unicode Collation Table](https://unicode.org/charts/collation/).
 
 ```c
@@ -132,7 +127,6 @@ equalp_unicos(hello1, hello2); // true
 | `int unequalp_unicos (unicos *uni1, unicos *uni2)` | return a reversed result of `equalp_unicos`. |
 
 #### Categorize Functions(Some Part)
-
 those functions can check the character's (not string) category with [Unicode Collation Table](https://unicode.org/charts/collation/).
 those are some part of all functions. 
 because too many categorize functions are defined in this library.
@@ -151,7 +145,6 @@ is_digits_unicos(2, 3, example); // Ü is false
 | `int is_katakana_and_hiragana_unicos (size_t index, size_t end, unicos*)` | return an integer that if characters category is katakana or hiragana, this return `1`. otherwise `0`. |
 
 #### Operator Function 
-
 | Function | Description | 
 ---- | ----
 | `int concat_unicos_manually (unicos*, unicos*, unicos *uniout)` | output to `uniout` what is concatenated string by first two arguments. if instance has no margin, this return a `UNICOS_NOT_ENOUGH_MEMORY`. on success, this always return `0`. |
@@ -257,7 +250,6 @@ get_unicoc_from_unicos(3, hello, &character2); // 0 is success.
 | `int put_unicop_utf32_manually (unsigned char c, unicop_utf32 *uniout)` | input a byte to `uniout`. if one of code point was decoded completely, insert it to `unicos` instance inside. if inside `unicos` instance has no margin, this return a `UNICOS_NOT_ENOUGH_MEMORY`. if has syntax error in inputted datas, this return a `UNICOP_UTF8_SYNTAX_ERROR`. on success, this return `0`. |
 
 ### unicob
-
 `unicob` is a data type like as a binary buffer.  
 it is able to recorded an encoded data by some format. 
 in this library, this is used to encoding.
@@ -283,6 +275,9 @@ in this library, this is used to encoding.
 | `int put_bom_unicob_as_utf32le_manually (unicob *uniout)` | input a BOM to `unicob`. if `unicob` has no margin, this return a `UNICOB_NOT_ENOUGH_MEMORY`. on success this return `0`. |
 
 ## Automatic Functions
+those functions allocate memory automatically with `malloc`.  
+but this library does not have GC, so you should release manually the unnecessary instance.
+if you want to make a temporary instance, you can use [Temporary Macros](#temporary-macros).
 
 ### unicos
 #### Basic Functions 
